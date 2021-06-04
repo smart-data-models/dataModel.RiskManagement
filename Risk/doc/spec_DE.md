@@ -2,11 +2,11 @@ Entität: Risiko
 ===============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Risk/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Auswirkung der Unsicherheit auf die Ziele. Eine Auswirkung ist eine Abweichung vom Erwarteten - positiv und/oder negativ. Ziele können unterschiedliche Aspekte haben (z. B. Finanz-, Gesundheits- und Sicherheits- sowie Umweltziele) und auf verschiedenen Ebenen gelten (z. B. strategisch, organisationsweit, Projekt, Produkt und Prozess). Risiken werden oft durch Bezugnahme auf potenzielle Ereignisse und Konsequenzen oder eine Kombination davon charakterisiert. Risiko wird oft durch eine Kombination aus den Folgen eines Ereignisses (einschließlich Änderungen der Umstände) und der damit verbundenen Eintrittswahrscheinlichkeit ausgedrückt. Ungewissheit ist der Zustand eines, wenn auch nur teilweisen, Mangels an Informationen in Bezug auf ein Ereignis, seine Folgen oder seine Wahrscheinlichkeit.  
+Globale Beschreibung: **Auswirkung der Unsicherheit auf die Ziele. Eine Auswirkung ist eine Abweichung vom Erwarteten - positiv und/oder negativ. Ziele können unterschiedliche Aspekte haben (z. B. Finanz-, Gesundheits- und Sicherheits- und Umweltziele) und auf verschiedenen Ebenen gelten (z. B. strategisch, organisationsweit, Projekt, Produkt und Prozess). Risiken werden oft durch Bezugnahme auf potenzielle Ereignisse und Konsequenzen oder eine Kombination davon charakterisiert. Risiko wird oft durch eine Kombination aus den Folgen eines Ereignisses (einschließlich Änderungen der Umstände) und der damit verbundenen Eintrittswahrscheinlichkeit ausgedrückt. Ungewissheit ist der Zustand eines, wenn auch nur teilweisen, Mangels an Informationen in Bezug auf ein Ereignis, seine Folgen oder seine Wahrscheinlichkeit.  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `affects`: Reihe von URIs, die sich auf den Bereich beziehen, auf den sich das Risiko auswirken könnte.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `consequence`: Die durch eine Risikomaterialisierung verursachte Folge. Enum:'Qualität, Quantität, Reputation'  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Die Risikobeschreibung in einer natürlichen Sprache  - `event`: Auftreten oder Veränderung eines bestimmten Sachverhalts. Enum:'Zerstörung, Unterbrechung, Manipulation, Verschmutzung'  - `id`: Eindeutiger Bezeichner der Entität  - `isOutputOf`: Array von URIs der verschiedenen Geodatenschichten  - `linkTo`: Array von URIs, die sich auf die Mitigation Measures beziehen.  - `location`:   - `mitigatedBy`: Array von URIs, die sich auf die Mitigation Measures beziehen.  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Die Auswirkung, die durch das zugehörige Risiko erzeugt wird. Enum:'LOW, MEDIUM, HIGH'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `sourceRisk`: Array von URIs, die sich auf die Quelle des Risikos beziehen, die eine Person, ein digitales System usw. sein kann.  - `threat`: Die potenzielle Ursache für einen Vorfall, der zu einer Verletzung der Informationssicherheit führen oder den Geschäftsbetrieb beeinträchtigen kann. Enum:'cyber, cyber-physisch, physisch'  - `type`: NGSI-LD Entity Type. Er muss gleich Risiko sein.  - `validFrom`: Der Zeitpunkt, an dem die Risikomaterialisierung beendet ist.  - `validTo`: Der Zeitpunkt, an dem die Risikomaterialisierung gestartet wird.    
+- `address`: Die Postanschrift  - `affects`: Reihe von URIs, die sich auf den Bereich beziehen, auf den sich das Risiko auswirken könnte.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `consequence`: Die durch eine Risikomaterialisierung verursachte Folge. Enum:'Qualität, Quantität, Reputation'  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Die Risikobeschreibung in einer natürlichen Sprache  - `event`: Auftreten oder Veränderung eines bestimmten Sachverhalts. Enum:'Zerstörung, Unterbrechung, Manipulation, Verschmutzung'  - `id`: Eindeutiger Bezeichner der Entität  - `isOutputOf`: Array von URIs der verschiedenen Geodatenschichten  - `linkTo`: Array von URIs, die sich auf die Mitigation Measures beziehen.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mitigatedBy`: Array von URIs, die sich auf die Mitigation Measures beziehen.  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Die Auswirkung, die durch das zugehörige Risiko erzeugt wird. Enum:'LOW, MEDIUM, HIGH'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `sourceRisk`: Array von URIs, die sich auf die Quelle des Risikos beziehen, die eine Person, ein digitales System usw. sein kann.  - `threat`: Die potenzielle Ursache für einen Vorfall, der zu einer Verletzung der Informationssicherheit führen oder den Geschäftsbetrieb beeinträchtigen kann. Enum:'cyber, cyber-physisch, physisch'  - `type`: NGSI-LD Entity Type. Er muss gleich Risiko sein.  - `validFrom`: Der Zeitpunkt, an dem die Risikomaterialisierung beendet ist.  - `validTo`: Der Zeitpunkt, an dem die Risikomaterialisierung gestartet wird.    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -128,10 +128,10 @@ Risk:
             type: string    
       type: Relationship    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -151,7 +151,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -174,7 +175,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -199,7 +201,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -221,7 +224,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -246,7 +250,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -273,7 +278,7 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     mitigatedBy:    
       description: 'Array of URIs related to the Mitigation Measures.'    
       items:    
