@@ -6,7 +6,7 @@ Entidad: Mitigación
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `affects`: Conjunto de URIs relacionadas con la zona a la que podría afectar el riesgo.  - `alternateName`: Un nombre alternativo para este artículo  - `apply`: Conjunto de URIs relacionados con las medidas asociadas a la mitigación.  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `consequence`: La consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: La descripción del riesgo en un lenguaje natural  - `event`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id`: Identificador único de la entidad  - `likelihood`: Probabilidad de que algo ocurra. En la terminología de la gestión de riesgos, la palabra "probabilidad" se utiliza para referirse a la posibilidad de que algo ocurra, ya sea definida, medida o determinada objetiva o subjetivamente, cualitativa o cuantitativamente, y descrita utilizando términos generales o matemáticos (incluye también los tipos de probabilidad ofrecidos como LoAH, LoAS, LoC)  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `threat`: La causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'ciber, físico, ciberfísico'  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
+- `address`: La dirección postal  - `affects`: Conjunto de URIs relacionadas con la zona a la que podría afectar el riesgo.  - `alternateName`: Un nombre alternativo para este artículo  - `apply`: Conjunto de URIs relacionados con las medidas asociadas a la mitigación.  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `consequence`: La consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: La descripción del riesgo en un lenguaje natural  - `event`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id`: Identificador único de la entidad  - `likelihood`: Probabilidad de que algo ocurra. En la terminología de la gestión de riesgos, la palabra "probabilidad" se utiliza para referirse a la posibilidad de que algo ocurra, ya sea definida, medida o determinada objetiva o subjetivamente, cualitativa o cuantitativamente, y descrita utilizando términos generales o matemáticos (incluye también los tipos de probabilidad ofrecidos como LoAH, LoAS, LoC)  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `threat`: La causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'ciber, físico, ciberfísico'  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
 Propiedades requeridas  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -118,10 +118,10 @@ Mitigation:
       description: 'Chance of something happening. In risk management terminology, the word ''likelihood'' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -141,7 +141,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -164,7 +165,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -189,7 +191,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -211,7 +214,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -236,7 +240,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -263,7 +268,7 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
