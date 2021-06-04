@@ -6,7 +6,7 @@ Entity: Mitigation
 
 ## List of properties  
 
-- `address`: The mailing address  - `affects`: Array of URIs related to the area in which the risk could affect.  - `alternateName`: An alternative name for this item  - `apply`: Array of URIs related to Measures associated to the mitigation.  - `areaServed`: The geographic area where a service or offered item is provided  - `consequence`: The consequence caused by a risk materialization. Enum:'quality, quantity, reputation'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: The risk description in a natural language  - `event`: Occurrence or change of a particular set of circumstances. Enum:'destruction, interruption, manipulation, pollution'  - `id`: Unique identifier of the entity  - `likelihood`: Chance of something happening. In risk management terminology, the word 'likelihood' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `threat`: The potential cause of an incident that may result in a breach of information security or compromise business operations. Enum:'cyber, physical, cyber-physical'  - `type`: NGSI-LD Entity Type. It must be equal to Risk.  - `validFrom`: The time at which the risk materialization is finished.  - `validTo`: The time at which the risk materialization is started.    
+- `address`: The mailing address  - `affects`: Array of URIs related to the area in which the risk could affect.  - `alternateName`: An alternative name for this item  - `apply`: Array of URIs related to Measures associated to the mitigation.  - `areaServed`: The geographic area where a service or offered item is provided  - `consequence`: The consequence caused by a risk materialization. Enum:'quality, quantity, reputation'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: The risk description in a natural language  - `event`: Occurrence or change of a particular set of circumstances. Enum:'destruction, interruption, manipulation, pollution'  - `id`: Unique identifier of the entity  - `likelihood`: Chance of something happening. In risk management terminology, the word 'likelihood' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `threat`: The potential cause of an incident that may result in a breach of information security or compromise business operations. Enum:'cyber, physical, cyber-physical'  - `type`: NGSI-LD Entity Type. It must be equal to Risk.  - `validFrom`: The time at which the risk materialization is finished.  - `validTo`: The time at which the risk materialization is started.    
 Required properties  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -118,10 +118,10 @@ Mitigation:
       description: 'Chance of something happening. In risk management terminology, the word ''likelihood'' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -141,7 +141,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -164,7 +165,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -189,7 +191,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -211,7 +214,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -236,7 +240,8 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -263,7 +268,7 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
