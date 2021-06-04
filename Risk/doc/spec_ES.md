@@ -6,7 +6,7 @@ Entidad: Riesgo
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `affects`: Conjunto de URIs relacionadas con la zona a la que podría afectar el riesgo.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `consequence`: La consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: La descripción del riesgo en un lenguaje natural  - `event`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id`: Identificador único de la entidad  - `isOutputOf`: Conjunto de URI de las diferentes capas de datos geoespaciales  - `linkTo`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`:   - `mitigatedBy`: Conjunto de URIs relacionados con las medidas de mitigación.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `sourceRisk`: Conjunto de URIs relacionados con la fuente del Riesgo que puede ser una Persona, un Sistema Digital, etc.  - `threat`: La causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'ciber, ciberfísico, físico'  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
+- `address`: La dirección postal  - `affects`: Conjunto de URIs relacionadas con la zona a la que podría afectar el riesgo.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `consequence`: La consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: La descripción del riesgo en un lenguaje natural  - `event`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id`: Identificador único de la entidad  - `isOutputOf`: Conjunto de URI de las diferentes capas de datos geoespaciales  - `linkTo`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mitigatedBy`: Conjunto de URIs relacionados con las medidas de mitigación.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `sourceRisk`: Conjunto de URIs relacionados con la fuente del Riesgo que puede ser una Persona, un Sistema Digital, etc.  - `threat`: La causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'ciber, ciberfísico, físico'  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
 Propiedades requeridas  
 - `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -128,10 +128,10 @@ Risk:
             type: string    
       type: Relationship    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -151,7 +151,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -174,7 +175,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -199,7 +201,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -221,7 +224,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -246,7 +250,8 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -273,7 +278,7 @@ Risk:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     mitigatedBy:    
       description: 'Array of URIs related to the Mitigation Measures.'    
       items:    
