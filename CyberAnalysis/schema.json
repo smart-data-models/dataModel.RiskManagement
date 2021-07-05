@@ -16,7 +16,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "Property. NGSI-LD Entity Type. It must be equal to Risk.",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to CyberAnalysis.",
           "enum": [
             "CyberAnalysis"
           ]
