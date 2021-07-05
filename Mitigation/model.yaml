@@ -22,9 +22,10 @@ Mitigation:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
-      type: Property
+      type: object
       x-ngsi:
         model: https://schema.org/address
+        type: Property
     affects:
       description: 'Array of URIs related to the area in which the risk could affect.'
       items:
@@ -37,10 +38,14 @@ Mitigation:
           - description: 'Property. Identifier format of any NGSI entity'
             format: uri
             type: string
-      type: Relationship
+      type: array
+      x-ngsi:
+        type: Relationship
     alternateName:
       description: 'An alternative name for this item'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     apply:
       description: 'Array of URIs related to Measures associated to the mitigation.'
       items:
@@ -53,33 +58,46 @@ Mitigation:
           - description: 'Property. Identifier format of any NGSI entity'
             format: uri
             type: string
-      type: Relationship
+      type: array
+      x-ngsi:
+        type: Relationship
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     consequence:
       description: 'The consequence caused by a risk materialization. Enum:''quality, quantity, reputation'''
       enum:
         - quality
         - quantity
         - reputation
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateCreated:
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateModified:
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     description:
       description: 'The risk description in a natural language'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     event:
       description: 'Occurrence or change of a particular set of circumstances. Enum:''destruction, interruption, manipulation, pollution'''
       enum:
@@ -87,7 +105,9 @@ Mitigation:
         - interruption
         - manipulation
         - pollution
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     id:
       anyOf: &mitigation_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
@@ -99,10 +119,13 @@ Mitigation:
           format: uri
           type: string
       description: 'Unique identifier of the entity'
-      type: Property
+      x-ngsi:
+        type: Property
     likelihood:
       description: 'Chance of something happening. In risk management terminology, the word ''likelihood'' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)'
-      type: Property
+      type: number
+      x-ngsi:
+        type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -254,16 +277,21 @@ Mitigation:
             - coordinates
           title: 'GeoJSON MultiPolygon'
           type: object
-      type: Geoproperty
+      x-ngsi:
+        type: Geoproperty
     name:
       description: 'The name of this item.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *mitigation_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
-      type: Property
+      type: array
+      x-ngsi:
+        type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
@@ -274,33 +302,42 @@ Mitigation:
           type: array
         - format: uri
           type: string
-      type: Property
+      x-ngsi:
+        type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     threat:
       description: 'The potential cause of an incident that may result in a breach of information security or compromise business operations. Enum:''cyber, physical, cyber-physical'''
       enum:
         - cyber
         - physical
         - cyber-physical
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     type:
       description: 'NGSI-LD Entity Type. It must be equal to Risk.'
       enum:
         - Mitigation
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     validFrom:
       description: 'The time at which the risk materialization is finished.'
       format: date-time
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Time
+        type: Property
     validTo:
       description: 'The time at which the risk materialization is started.'
       format: date-time
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Time
+        type: Property
   required: []
   type: object
