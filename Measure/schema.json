@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Measure/schema.json",
     "title": "Smart Data Models - Risk Assessment - Measure Entity",
