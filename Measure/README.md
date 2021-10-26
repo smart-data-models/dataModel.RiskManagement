@@ -6,7 +6,7 @@ Version: 0.0.1
 Specific measure translated into actions to be performed into the different systems
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Measure/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/Measure/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Measure/doc/spec.md)
 
