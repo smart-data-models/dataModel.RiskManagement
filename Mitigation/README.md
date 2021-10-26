@@ -6,7 +6,7 @@ Version: 0.0.1
 The mitigation of consequences reduces the risk after an event has occurred. Therefore, this risk reduction measure is not suitable for the reduction of the likelihood of events but for the reduction of the negative consequences. Examples for consequence mitigation measures could be e.g. the construction of connection pipes to the neighbor water supplier(s) to get water from them in case of a breakdown of the own water supply, the construction of wells for an emergency supply or signing of contracts with organizations providing small mobile emergency water treatment plants.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/Mitigation/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/doc/spec.md)
 
