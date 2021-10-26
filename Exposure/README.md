@@ -6,7 +6,7 @@ Version: 0.0.1
 This entity contains a harmonised description of a generic Exposure Entity made for the Risk Assessment domain.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Exposure/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/Exposure/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Exposure/doc/spec.md)
 
