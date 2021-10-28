@@ -5,7 +5,7 @@ Entidad: NetworkServiceAlert
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: La categoría MITRE de una alerta.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `idCode`: El código/id de MITRE de una alerta.  - `identify`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `subcategory`: La subcategoría MITRE de una alerta.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: La categoría MITRE de una alerta.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `idCode`: El código/id de MITRE de una alerta.  - `identify`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `subcategory`: La subcategoría MITRE de una alerta.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
 Propiedades requeridas  
 - `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -35,34 +35,48 @@ NetworkServiceAlert:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'The MITRE category of an Alert.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &networkservicealert_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -74,10 +88,13 @@ NetworkServiceAlert:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     idCode:    
       description: 'The MITRE code/id of an Alert.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     identify:    
       description: 'Array of URIs related to the Mitigation Measures.'    
       items:    
@@ -90,7 +107,9 @@ NetworkServiceAlert:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -242,16 +261,21 @@ NetworkServiceAlert:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *networkservicealert_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -262,37 +286,48 @@ NetworkServiceAlert:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     severity:    
       description: 'The impact generated by the associated Risk. Enum:''LOW, MEDIUM, HIGH'''    
       enum:    
         - LOW    
         - MEDIUM    
         - HIGH    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     subcategory:    
       description: 'The MITRE subcategory of an Alert.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Risk.'    
       enum:    
         - NetworkServiceAlert    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The time at which the risk materialization is finished.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
     validTo:    
       description: 'The time at which the risk materialization is started.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
   required:    
     - id    
     - type    
@@ -300,7 +335,98 @@ NetworkServiceAlert:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### NetworkServiceAlert NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:NetworkServiceAlert:01",  
+  "type": "NetworkServiceAlert",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
+        ]  
+      ]  
+    ]  
+  },  
+  "severity": "MEDIUM",  
+  "subcategory": "Discovery",  
+  "category": "Network Service Scanning",  
+  "name": "Network Service Scanning alert",  
+  "idCode": "T1046 MITRE",  
+  "identify": [  
+    "urn:ngsi-ld:Vulnerability:01"  
+  ]  
+}  
+```  
 No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### NetworkServiceAlert NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:NetworkServiceAlert:01",  
+  "type": "NetworkServiceAlert",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
+        ]  
+      ]  
+    ]  
+  },  
+  "severity": "MEDIUM",  
+  "subcategory": "Discovery",  
+  "category": "Network Service Scanning",  
+  "name": "Network Service Scanning alert",  
+  "idCode": "T1046 MITRE",  
+  "identify": [  
+    "urn:ngsi-ld:Vulnerability:01"  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
 No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD como normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
