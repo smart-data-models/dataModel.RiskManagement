@@ -1,12 +1,12 @@
-Entität: Mitigation  
-===================  
+Entität: Milderung  
+==================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Die Minderung von Folgen reduziert das Risiko, nachdem ein Ereignis eingetreten ist. Daher ist diese Risikominderungsmaßnahme nicht für die Verringerung der Wahrscheinlichkeit von Ereignissen geeignet, sondern für die Verringerung der negativen Folgen. Beispiele für Maßnahmen zur Folgenminderung könnten z. B. der Bau von Verbindungsleitungen zu dem/den benachbarten Wasserversorger(n) sein, um bei einem Ausfall der eigenen Wasserversorgung Wasser von dort zu beziehen, der Bau von Brunnen für eine Notversorgung oder die Unterzeichnung von Verträgen mit Organisationen, die kleine mobile Notwasseraufbereitungsanlagen bereitstellen.**  
+Globale Beschreibung: **Die Minderung der Folgen verringert das Risiko, nachdem ein Ereignis eingetreten ist. Daher ist diese Risikominderungsmaßnahme nicht für die Verringerung der Wahrscheinlichkeit von Ereignissen geeignet, sondern für die Verringerung der negativen Folgen. Beispiele für Maßnahmen zur Folgenminderung wären z.B. der Bau von Verbindungsleitungen zum/zu den benachbarten Wasserversorger(n), um im Falle eines Ausfalls der eigenen Wasserversorgung Wasser von dort zu beziehen, der Bau von Brunnen für eine Notversorgung oder der Abschluss von Verträgen mit Organisationen, die kleine mobile Notwasseraufbereitungsanlagen anbieten.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `affects`: Reihe von URIs, die sich auf den Bereich beziehen, auf den sich das Risiko auswirken könnte.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `apply`: Array von URIs, die sich auf Measures beziehen, die mit der Mitigation verbunden sind.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `consequence`: Die durch eine Risikomaterialisierung verursachte Folge. Enum:'Qualität, Quantität, Reputation'  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Die Risikobeschreibung in einer natürlichen Sprache  - `event`: Auftreten oder Veränderung eines bestimmten Sachverhalts. Enum:'Zerstörung, Unterbrechung, Manipulation, Verschmutzung'  - `id`: Eindeutiger Bezeichner der Entität  - `likelihood`: Wahrscheinlichkeit, dass etwas eintritt. In der Terminologie des Risikomanagements wird das Wort "Wahrscheinlichkeit" verwendet, um die Chance zu bezeichnen, dass etwas eintritt, unabhängig davon, ob es objektiv oder subjektiv, qualitativ oder quantitativ definiert, gemessen oder bestimmt und mit allgemeinen Begriffen oder mathematisch beschrieben wird (umfasst auch die Arten der angebotenen Wahrscheinlichkeit wie LoAH, LoAS, LoC)  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `threat`: Die potenzielle Ursache für einen Vorfall, der zu einer Verletzung der Informationssicherheit führen oder den Geschäftsbetrieb beeinträchtigen kann. Enum:'cyber, physical, cyber-physical'  - `type`: NGSI-LD Entity Type. Er muss gleich Risiko sein.  - `validFrom`: Der Zeitpunkt, an dem die Risikomaterialisierung beendet ist.  - `validTo`: Der Zeitpunkt, an dem die Risikomaterialisierung gestartet wird.    
+- `address`: Die Postanschrift  - `affects`: Eine Reihe von URIs, die sich auf das Gebiet beziehen, in dem das Risiko auftreten könnte.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `apply`: Array von URIs, die sich auf die mit der Milderung verbundenen Maßnahmen beziehen.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `consequence`: Die durch die Verwirklichung eines Risikos verursachte Folge. Enum:'Qualität, Quantität, Ruf'  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Die Risikobeschreibung in einer natürlichen Sprache  - `event`: Auftreten oder Veränderung eines bestimmten Sachverhalts. Enum:'Zerstörung, Unterbrechung, Manipulation, Verschmutzung'  - `id`: Eindeutiger Bezeichner der Entität  - `likelihood`: Die Wahrscheinlichkeit, dass etwas eintritt. In der Terminologie des Risikomanagements bezieht sich das Wort "Wahrscheinlichkeit" auf die Chance, dass etwas eintritt, unabhängig davon, ob es objektiv oder subjektiv, qualitativ oder quantitativ definiert, gemessen oder bestimmt und mit allgemeinen Begriffen oder mathematisch beschrieben wird (umfasst auch die Arten der angebotenen Wahrscheinlichkeit wie LoAH, LoAS, LoC)  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `threat`: Die potenzielle Ursache eines Vorfalls, der zu einer Verletzung der Informationssicherheit führen oder den Geschäftsbetrieb beeinträchtigen kann. Enum:'cyber, physisch, cyber-physisch'  - `type`: NGSI-LD Entitätstyp. Er muss gleich Risiko sein.  - `validFrom`: Der Zeitpunkt, zu dem die Risikomaterialisierung abgeschlossen ist.  - `validTo`: Der Zeitpunkt, zu dem die Risikomaterialisierung beginnt.    
 Erforderliche Eigenschaften  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,9 +36,10 @@ Mitigation:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     affects:    
       description: 'Array of URIs related to the area in which the risk could affect.'    
       items:    
@@ -51,10 +52,14 @@ Mitigation:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     apply:    
       description: 'Array of URIs related to Measures associated to the mitigation.'    
       items:    
@@ -67,33 +72,46 @@ Mitigation:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     consequence:    
       description: 'The consequence caused by a risk materialization. Enum:''quality, quantity, reputation'''    
       enum:    
         - quality    
         - quantity    
         - reputation    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'The risk description in a natural language'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     event:    
       description: 'Occurrence or change of a particular set of circumstances. Enum:''destruction, interruption, manipulation, pollution'''    
       enum:    
@@ -101,7 +119,9 @@ Mitigation:
         - interruption    
         - manipulation    
         - pollution    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &mitigation_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -113,10 +133,13 @@ Mitigation:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     likelihood:    
       description: 'Chance of something happening. In risk management terminology, the word ''likelihood'' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -268,16 +291,21 @@ Mitigation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *mitigation_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -288,40 +316,146 @@ Mitigation:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     threat:    
       description: 'The potential cause of an incident that may result in a breach of information security or compromise business operations. Enum:''cyber, physical, cyber-physical'''    
       enum:    
         - cyber    
         - physical    
         - cyber-physical    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Risk.'    
       enum:    
         - Mitigation    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The time at which the risk materialization is finished.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
     validTo:    
       description: 'The time at which the risk materialization is started.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
   required: []    
   type: object    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-Nicht verfügbar das Beispiel einer Mitigation im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
-Nicht verfügbar das Beispiel einer Mitigation im JSON-LD-Format als normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
-Nicht verfügbar das Beispiel einer Mitigation im JSON-LD-Format als Key-Values. Dies ist bei Verwendung von `options=keyValues` kompatibel mit NGSI-LD und liefert die Kontextdaten einer einzelnen Entität.  
-Nicht verfügbar das Beispiel einer Mitigation im JSON-LD-Format als normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Entschärfung NGSI-v2 Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für eine Mitigation im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
+        ]  
+      ]  
+    ]  
+  },  
+  "threat": "physical",  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ]  
+}  
+```  
+Nicht verfügbar ist das Beispiel einer Mitigation im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Entschärfung NGSI-LD-Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für eine Mitigation im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
+        ]  
+      ]  
+    ]  
+  },  
+  "threat": "physical",  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+Nicht verfügbar ist das Beispiel einer Mitigation im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
