@@ -2,7 +2,7 @@ Entidad: Peligro
 ================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Hazard/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Esta entidad contiene una descripción armonizada de una entidad genérica de Peligros hecha para el dominio de la Evaluación de Riesgos.**  
+Descripción global: **Esta entidad contiene una descripción armonizada de una entidad genérica de Peligros hecha para el dominio de Evaluación de Riesgos.**  
 
 ## Lista de propiedades  
 
@@ -36,26 +36,33 @@ Hazard:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     analysisType:    
       description: 'The type of analysis.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     analyzedAt:    
       description: ""    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time.    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     contentInformation:    
       description: 'Array of objects that describes the Hazard Map and contains its ids, values and colors.'    
       items:    
@@ -67,7 +74,9 @@ Hazard:
           value:    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     createsLayers:    
       description: 'Array of URIs of the layers created by this hazard.'    
       items:    
@@ -80,21 +89,31 @@ Hazard:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &hazard_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -106,7 +125,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     isAffectedByEO:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -118,7 +138,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'The ID of the EOAnalysis that identified this hazard.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     isAffectedByGIS:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -130,7 +151,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'The ID of the GISData that identified this hazard.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -282,16 +304,21 @@ Hazard:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *hazard_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -302,15 +329,20 @@ Hazard:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Hazard.'    
       enum:    
         - Hazard    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
