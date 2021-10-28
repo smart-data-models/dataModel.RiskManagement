@@ -2,11 +2,11 @@ Entität: Hazard
 ===============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Hazard/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Gefahrenentität, die für den Bereich Risikobewertung erstellt wurde.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Gefahrenentität, die für den Bereich Risikobewertung erstellt wurde**.  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `analysisType`: Die Art der Analyse.  - `analyzedAt`:   - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `contentInformation`: Array von Objekten, das die Gefahrenkarte beschreibt und ihre Ids, Werte und Farben enthält.  - `createsLayers`: Array mit URIs der Ebenen, die von dieser Gefährdung erzeugt werden.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isAffectedByEO`: Die ID der EOAnalyse, die diese Gefahr identifiziert hat.  - `isAffectedByGIS`: Die ID der GISData, die diese Gefahr identifiziert hat.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-LD Entity Type. Er muss gleich "Hazard" sein.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `analysisType`: Die Art der Analyse.  - `analyzedAt`:   - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `contentInformation`: Array von Objekten, das die Gefahrenkarte beschreibt und ihre IDs, Werte und Farben enthält.  - `createsLayers`: Array von URIs der von dieser Gefahr erzeugten Ebenen.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isAffectedByEO`: Die ID der EOAnalyse, die diese Gefahr identifiziert hat.  - `isAffectedByGIS`: Die ID der GISData, die diese Gefahr identifiziert hat.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-LD Entitätstyp. Er muss gleich "Hazard" sein.    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,26 +36,33 @@ Hazard:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     analysisType:    
       description: 'The type of analysis.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     analyzedAt:    
       description: ""    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time.    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     contentInformation:    
       description: 'Array of objects that describes the Hazard Map and contains its ids, values and colors.'    
       items:    
@@ -67,7 +74,9 @@ Hazard:
           value:    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     createsLayers:    
       description: 'Array of URIs of the layers created by this hazard.'    
       items:    
@@ -80,21 +89,31 @@ Hazard:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &hazard_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -106,7 +125,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     isAffectedByEO:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -118,7 +138,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'The ID of the EOAnalysis that identified this hazard.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     isAffectedByGIS:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -130,7 +151,8 @@ Hazard:
           format: uri    
           type: string    
       description: 'The ID of the GISData that identified this hazard.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -282,16 +304,21 @@ Hazard:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *hazard_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -302,15 +329,20 @@ Hazard:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Hazard.'    
       enum:    
         - Hazard    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -319,7 +351,7 @@ Hazard:
 </details>    
 ## Beispiel-Nutzlasten  
 #### Hazard NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen Hazard im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und gibt die Kontextdaten einer einzelnen Entität zurück.  
+Hier ist ein Beispiel für einen Hazard im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Hazard:01",  
@@ -378,8 +410,8 @@ Hazard:
   ]  
 }  
 ```  
-#### Gefährdung NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Hazard im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Hazard NGSI-v2 normalisiert Beispiel  
+Hier ist ein Beispiel für einen Hazard im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Hazard.01",  
@@ -459,7 +491,7 @@ Hazard:
   }  
 }  
 ```  
-#### Gefahr NGSI-LD-Schlüsselwerte Beispiel  
+#### Hazard NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für einen Hazard im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
@@ -523,7 +555,7 @@ Hazard:
 }  
 ```  
 #### Gefährdung NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen Hazard im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Hazard im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Hazard:01",  
