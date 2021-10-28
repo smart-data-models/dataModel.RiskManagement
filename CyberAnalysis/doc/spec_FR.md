@@ -36,9 +36,10 @@ CyberAnalysis:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     affects:    
       description: 'Array of URIs related to the area in which the risk could affect.'    
       items:    
@@ -51,32 +52,47 @@ CyberAnalysis:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     analysisType:    
       description: 'The type of analysis.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     generate:    
       description: 'Array of URIs related to the area in which the risk could affect.'    
       items:    
@@ -89,7 +105,9 @@ CyberAnalysis:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: &cyberanalysis_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -101,7 +119,8 @@ CyberAnalysis:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -253,16 +272,21 @@ CyberAnalysis:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *cyberanalysis_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -273,27 +297,34 @@ CyberAnalysis:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Risk.'    
       enum:    
         - CyberAnalysis    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The time at which the risk materialziation is finished.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
     validTo:    
       description: 'The time at which the risk materialziation is started.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Time    
+        type: Property    
   required:    
     - id    
     - type    
@@ -301,7 +332,44 @@ CyberAnalysis:
 ```  
 </details>    
 ## Exemples de charges utiles  
-Non disponible l'exemple d'une CyberAnalyse au format JSON-LD comme valeurs-clés. Ceci est compatible avec la NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### CyberAnalysis NGSI-v2 key-values Exemple  
+Voici un exemple de CyberAnalyse au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec la NGSI-v2 lorsqu'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CyberAnalysis:01",  
+  "type": "CyberAnalysis",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-19T12:00:00Z",  
+  "analysisType": "CyberAnalysis-AnomalyDetector",  
+  "value": 0,  
+  "affects": [  
+    "urn:ngsi-ld:Asset:01"  
+  ],  
+  "generate": [  
+    "urn:ngsi-ld:NetworkServiceAlert:01"  
+  ]  
+}  
+```  
 Non disponible l'exemple d'une CyberAnalyse au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-Non disponible l'exemple d'une CyberAnalyse au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### CyberAnalyse NGSI-LD valeurs-clés Exemple  
+Voici un exemple de CyberAnalyse au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CyberAnalysis:01",  
+  "type": "CyberAnalysis",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-19T12:00:00Z",  
+  "analysisType": "CyberAnalysis-AnomalyDetector",  
+  "value": 0,  
+  "affects": [  
+    "urn:ngsi-ld:Asset:01"  
+  ],  
+  "generate": [  
+    "urn:ngsi-ld:NetworkServiceAlert:01"  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
 Non disponible l'exemple d'une CyberAnalyse au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
