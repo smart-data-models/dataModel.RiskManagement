@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `affects`: リスクの影響を受ける可能性のある領域に関連するURIの配列。  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `consequence`: リスクの具体化によって引き起こされる結果。Enum:'quality, quantity, reputation' (品質、量、評判)  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: 自然言語によるリスクの説明  - `event`: 特定の状況セットの発生または変化。Enum:'destruction, interruption, manipulation, pollution' (破壊、中断、操作、汚染)  - `id`: エンティティのユニークな識別子  - `isOutputOf`: 異なるGeospatial Data LayersのURIの配列  - `linkTo`: 緩和策に関連するURIの配列。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mitigatedBy`: 緩和策に関連するURIの配列。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `severity`: 関連するリスクによって発生するインパクト。Enum:'LOW, MEDIUM, HIGH' (低、中、高)  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceRisk`: リスクの発生源に関連するURIの配列で、人やデジタルシステムなどが考えられる。  - `threat`: 情報セキュリティの侵害や事業活動の低下を引き起こす可能性のあるインシデントの潜在的な原因。Enum:'cyber, cyber-physical, physical' (サイバー、サイバーフィジカル、フィジカル)  - `type`: NGSI-LD エンティティタイプ。Riskと同じでなければなりません。  - `validFrom`: リスクの具体化が終了した時間。  - `validTo`: リスクの具体化が開始された時間です。    
+- `address`: 郵送先住所  - `affects`: リスクの影響を受ける可能性のある領域に関連するURIの配列。  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `consequence`: リスクの具体化によって引き起こされる結果。Enum:'quality, quantity, reputation' (品質、量、評判)  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: 自然言語によるリスクの説明  - `event`: 特定の状況セットの発生または変化。Enum:'destruction, interruption, manipulation, pollution' (破壊、中断、操作、汚染)  - `id`: エンティティのユニークな識別子  - `isOutputOf`: 異なる地理空間データレイヤーのURIの配列  - `linkTo`: 緩和策に関連するURIの配列。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mitigatedBy`: 緩和策に関連するURIの配列。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `severity`: 関連するリスクによって発生するインパクト。Enum:'LOW, MEDIUM, HIGH' (低、中、高)  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceRisk`: リスクの発生源に関連するURIの配列で、人やデジタルシステムなどが考えられる。  - `threat`: 情報セキュリティの侵害やビジネスオペレーションの危険をもたらす可能性のあるインシデントの潜在的な原因。Enum:'cyber, cyber-physical, physical' (サイバー、サイバーフィジカル、フィジカル)  - `type`: NGSI-LD エンティティタイプ。Riskと同じでなければなりません。  - `validFrom`: リスクの具体化が終了した時間。  - `validTo`: リスクの具体化が開始された時間です。    
 必須項目  
 - `id`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます  
@@ -565,7 +565,7 @@ Risk:
 }  
 ```  
 #### リスク NGSI-LDのキーバリューの例  
-ここでは、Riskをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、Riskをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Risk:01",  
