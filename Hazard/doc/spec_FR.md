@@ -491,7 +491,7 @@ Hazard:
   }  
 }  
 ```  
-#### Valeurs-clés NGSI-LD de danger Exemple  
+#### Valeurs-clés NGSI-LD de risque Exemple  
 Voici un exemple d'un Hazard au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
