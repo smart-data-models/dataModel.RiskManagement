@@ -314,7 +314,7 @@ Asset:
 }  
 ```  
 Non disponible l'exemple d'un actif au format JSON-LD tel que normalisé. Ce format est compatible avec la norme NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-#### Valeurs-clés NGSI-LD des actifs Exemple  
+#### Valeurs clés NGSI-LD de l'actif Exemple  
 Voici un exemple d'actif au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
