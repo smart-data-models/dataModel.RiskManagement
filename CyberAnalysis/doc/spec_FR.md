@@ -351,7 +351,7 @@ CyberAnalysis:
 }  
 ```  
 Non disponible l'exemple d'une CyberAnalyse au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-#### CyberAnalyse NGSI-LD valeurs-clés Exemple  
+#### CyberAnalyse Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de CyberAnalyse au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
