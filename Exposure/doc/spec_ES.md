@@ -397,7 +397,7 @@ Exposure:
 }  
 ```  
 #### Exposición NGSI-v2 normalizada Ejemplo  
-He aquí un ejemplo de una Exposición en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de una Exposición en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "Exposure.01",  
