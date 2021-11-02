@@ -269,9 +269,9 @@ Measure:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It must be equal to Risk.'
+      description: 'NGSI-LD Entity Type. It must be equal to Measure.'
       enum:
-        - Mitigation
+        - Measure
       type: string
       x-ngsi:
         type: Property
@@ -279,3 +279,9 @@ Measure:
     - id
     - type
   type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Measure/LICENSE.md
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Measure/schema.json
+  x-model-tags: ""
+  x-version: 0.0.1
