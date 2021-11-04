@@ -32,6 +32,7 @@
         "location": "ngsi-ld:location",
         "mitigatedBy": "https://smartdatamodels.org/dataModel.RiskManagement/mitigatedBy",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "severity": "https://smartdatamodels.org/dataModel.RiskManagement/severity",
