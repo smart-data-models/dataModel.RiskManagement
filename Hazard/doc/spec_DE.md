@@ -6,7 +6,7 @@ Entität: Hazard
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `analysisType`: Die Art der Analyse.  - `analyzedAt`:   - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `contentInformation`: Array von Objekten, das die Gefahrenkarte beschreibt und ihre IDs, Werte und Farben enthält.  - `createsLayers`: Array von URIs der von dieser Gefahr erzeugten Ebenen.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isAffectedByEO`: Die ID der EOAnalyse, die diese Gefahr identifiziert hat.  - `isAffectedByGIS`: Die ID der GISData, die diese Gefahr identifiziert hat.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der vollständig qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-LD Entitätstyp. Er muss gleich "Hazard" sein.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `analysisType`: Die Art der Analyse.  - `analyzedAt`: Der Zeitpunkt, zu dem die Analyse beendet wurde  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `contentInformation`: Array von Objekten, das die Gefahrenkarte beschreibt und ihre IDs, Werte und Farben enthält.  - `createsLayers`: Array von URIs der von dieser Gefahr erzeugten Ebenen.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isAffectedByEO`: Die ID der EOAnalyse, die diese Gefahr identifiziert hat.  - `isAffectedByGIS`: Die ID der GISData, die diese Gefahr identifiziert hat.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-LD Entitätstyp. Er muss gleich "Hazard" sein.    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -51,11 +51,11 @@ Hazard:
       x-ngsi:    
         type: Property    
     analyzedAt:    
-      description: ""    
+      description: 'The time at which the analysis finished'    
       format: date-time    
       type: string    
       x-ngsi:    
-        model: https://schema.org/Time.    
+        model: https://schema.org/Time    
         type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
@@ -347,6 +347,12 @@ Hazard:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Hazard/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
