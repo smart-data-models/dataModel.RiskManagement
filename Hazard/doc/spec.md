@@ -6,7 +6,7 @@ Entity: Hazard
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `analysisType`: The type of analysis.  - `analyzedAt`:   - `areaServed`: The geographic area where a service or offered item is provided  - `contentInformation`: Array of objects that describes the Hazard Map and contains its ids, values and colors.  - `createsLayers`: Array of URIs of the layers created by this hazard.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `isAffectedByEO`: The ID of the EOAnalysis that identified this hazard.  - `isAffectedByGIS`: The ID of the GISData that identified this hazard.  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to Hazard.    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `analysisType`: The type of analysis.  - `analyzedAt`: The time at which the analysis finished  - `areaServed`: The geographic area where a service or offered item is provided  - `contentInformation`: Array of objects that describes the Hazard Map and contains its ids, values and colors.  - `createsLayers`: Array of URIs of the layers created by this hazard.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `isAffectedByEO`: The ID of the EOAnalysis that identified this hazard.  - `isAffectedByGIS`: The ID of the GISData that identified this hazard.  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to Hazard.    
 Required properties  
 - `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -51,11 +51,11 @@ Hazard:
       x-ngsi:    
         type: Property    
     analyzedAt:    
-      description: ""    
+      description: 'The time at which the analysis finished'    
       format: date-time    
       type: string    
       x-ngsi:    
-        model: https://schema.org/Time.    
+        model: https://schema.org/Time    
         type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
@@ -347,6 +347,12 @@ Hazard:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Hazard/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
