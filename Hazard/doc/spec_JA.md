@@ -6,10 +6,10 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `analysisType`: 分析の種類です。  - `analyzedAt`:   - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `contentInformation`: ハザードマップを説明するオブジェクトの配列で、ID、値、色を含みます。  - `createsLayers`: このハザードで作成されたレイヤーのURIの配列。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `isAffectedByEO`: このハザードを特定したEOAnalysisのID。  - `isAffectedByGIS`: このハザードを特定したGISデータのID。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Hazardと同じである必要があります。    
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `analysisType`: 分析の種類です。  - `analyzedAt`: 分析が終了した時刻  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `contentInformation`: ハザードマップを説明するオブジェクトの配列で、ID、値、色を含みます。  - `createsLayers`: このハザードで作成されたレイヤーのURIの配列。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `isAffectedByEO`: このハザードを特定したEOAnalysisのID。  - `isAffectedByGIS`: このハザードを特定したGISデータのID。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Hazardと同じである必要があります。    
 必須項目  
 - `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Hazard:    
@@ -51,11 +51,11 @@ Hazard:
       x-ngsi:    
         type: Property    
     analyzedAt:    
-      description: ""    
+      description: 'The time at which the analysis finished'    
       format: date-time    
       type: string    
       x-ngsi:    
-        model: https://schema.org/Time.    
+        model: https://schema.org/Time    
         type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
@@ -347,6 +347,12 @@ Hazard:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Hazard/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Hazard/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
