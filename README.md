@@ -1,4 +1,5 @@
 # dataModel.RiskManagement
+The defined datamodels are useful for the Risk Assessment representation inside a water critical infrastructure, considering the modelling of cascading effects. This entities are most of them derived from ISO standards on Risk Assessment.
 
 ### List of data models
 
@@ -31,3 +32,5 @@ The following entity types are available:
 
 ### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.RiskManagement/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.RiskManagement/pulls) on existing data models
+
+
