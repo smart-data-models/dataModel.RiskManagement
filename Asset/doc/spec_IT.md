@@ -355,3 +355,4 @@ Asset:
 }  
 ```  
 Non disponibile l'esempio di un Asset in formato JSON-LD come normalizzato. Questo è compatibile con NGSI-LD quando non usa le opzioni e restituisce i dati di contesto di una singola entità.  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
