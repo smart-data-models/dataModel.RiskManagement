@@ -459,3 +459,4 @@ Mitigation:
 }  
 ```  
 Not available the example of a Mitigation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
