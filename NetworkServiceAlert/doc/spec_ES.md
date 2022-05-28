@@ -1,18 +1,21 @@
-Entidad: NetworkServiceAlert  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: NetworkServiceAlert  
 ============================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/NetworkServiceAlert/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Modelo de datos para la calificación y notificación de aquellas alertas en un servicio de red y su relación con las correspondientes medidas de mitigación**  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: La categoría MITRE de una alerta.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `idCode`: El código/id de MITRE de una alerta.  - `identify`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `subcategory`: La subcategoría MITRE de una alerta.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo.  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: La categoría MITRE de una alerta.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `idCode`: El código/id de MITRE de una alerta.  - `identify`: Conjunto de URIs relacionados con las medidas de mitigación.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: El impacto generado por el Riesgo asociado. Enum:'BAJO, MEDIO, ALTO'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `subcategory`: La subcategoría MITRE de una Alerta.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a NetworkServiceAlert  - `validFrom`: El momento en el que se termina la materialización del riesgo.  - `validTo`: El momento en que se inicia la materialización del riesgo.    
 Propiedades requeridas  
 - `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 NetworkServiceAlert:    
-  description: ""    
+  description: 'Data model for the qualification and reporting of those alerts in a network service and its relation to the corresponding mitigation measures'    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -308,7 +311,7 @@ NetworkServiceAlert:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI-LD Entity Type. It must be equal to Risk.'    
+      description: 'NGSI-LD Entity Type. It must be equal to NetworkServiceAlert'    
       enum:    
         - NetworkServiceAlert    
       type: string    
@@ -332,6 +335,12 @@ NetworkServiceAlert:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/NetworkServiceAlert/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/CyberAnalysis/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -380,54 +389,201 @@ NetworkServiceAlert:
   ]  
 }  
 ```  
-No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-#### NetworkServiceAlert NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### NetworkServiceAlert NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un NetworkServiceAlert en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:NetworkServiceAlert:01",  
   "type": "NetworkServiceAlert",  
-  "validFrom": "2021-02-18T12:00:00Z",  
-  "validTo": "2021-02-18T12:00:00Z",  
+  "validFrom": {  
+    "type": "DateTime",  
+    "value": "2021-02-18T12:00:00Z"  
+  },  
+  "validTo": {  
+    "type": "DateTime",  
+    "value": "2021-02-18T12:00:00Z"  
+  },  
   "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
         [  
-          23.6627,  
-          41.88768  
-        ],  
-        [  
-          25.85598,  
-          43.38622  
-        ],  
-        [  
-          23.4899,  
-          43.78691  
-        ],  
-        [  
-          22.35609,  
-          42.28869  
-        ],  
-        [  
-          23.6627,  
-          41.88769  
+          [  
+            23.6627,  
+            41.88768  
+          ],  
+          [  
+            25.85598,  
+            43.38622  
+          ],  
+          [  
+            23.4899,  
+            43.78691  
+          ],  
+          [  
+            22.35609,  
+            42.28869  
+          ],  
+          [  
+            23.6627,  
+            41.88769  
+          ]  
         ]  
       ]  
-    ]  
+    }  
   },  
-  "severity": "MEDIUM",  
-  "subcategory": "Discovery",  
-  "category": "Network Service Scanning",  
-  "name": "Network Service Scanning alert",  
-  "idCode": "T1046 MITRE",  
-  "identify": [  
-    "urn:ngsi-ld:Vulnerability:01"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+  "severity": {  
+    "type": "Text",  
+    "value": "MEDIUM"  
+  },  
+  "subcategory": {  
+    "type": "Text",  
+    "value": "Discovery"  
+  },  
+  "category": {  
+    "type": "Text",  
+    "value": "Network Service Scanning"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Network Service Scanning alert"  
+  },  
+  "idCode": {  
+    "type": "Text",  
+    "value": "T1046 MITRE"  
+  },  
+  "identify": {  
+    "type": "Text",  
+    "value": [  
+      "urn:ngsi-ld:Vulnerability:01"  
+    ]  
+  }  
 }  
 ```  
-No está disponible el ejemplo de un NetworkServiceAlert en formato JSON-LD como normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+#### NetworkServiceAlert NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un NetworkServiceAlert en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+    "id": "urn:ngsi-ld:NetworkServiceAlert:01",  
+    "type": "NetworkServiceAlert",  
+    "category": "Network Service Scanning",  
+    "idCode": "T1046 MITRE",  
+    "identify": [  
+        "urn:ngsi-ld:Vulnerability:01"  
+    ],  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    23.6627,  
+                    41.88768  
+                ],  
+                [  
+                    25.85598,  
+                    43.38622  
+                ],  
+                [  
+                    23.4899,  
+                    43.78691  
+                ],  
+                [  
+                    22.35609,  
+                    42.28869  
+                ],  
+                [  
+                    23.6627,  
+                    41.88769  
+                ]  
+            ]  
+        ]  
+    },  
+    "name": "Network Service Scanning alert",  
+    "severity": "MEDIUM",  
+    "subcategory": "Discovery",  
+    "validFrom": "2021-02-18T12:00:00Z",  
+    "validTo": "2021-02-18T12:00:00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+    ]  
+}  
+```  
+#### NetworkServiceAlert NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un NetworkServiceAlert en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+    "id": "urn:ngsi-ld:NetworkServiceAlert:01",  
+    "type": "NetworkServiceAlert",  
+    "category": {  
+        "type": "Property",  
+        "value": "Network Service Scanning"  
+    },  
+    "idCode": {  
+        "type": "Property",  
+        "value": "T1046 MITRE"  
+    },  
+    "identify": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:Vulnerability:01"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        23.6627,  
+                        41.88768  
+                    ],  
+                    [  
+                        25.85598,  
+                        43.38622  
+                    ],  
+                    [  
+                        23.4899,  
+                        43.78691  
+                    ],  
+                    [  
+                        22.35609,  
+                        42.28869  
+                    ],  
+                    [  
+                        23.6627,  
+                        41.88769  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Network Service Scanning alert"  
+    },  
+    "severity": {  
+        "type": "Property",  
+        "value": "MEDIUM"  
+    },  
+    "subcategory": {  
+        "type": "Property",  
+        "value": "Discovery"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "@context": []  
+}  
+```  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
