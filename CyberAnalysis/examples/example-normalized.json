@@ -24,5 +24,8 @@
     "value": [
       "urn:ngsi-ld:NetworkServiceAlert:01"
     ]
-  }
+  },
+  "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
+    ]
 }
