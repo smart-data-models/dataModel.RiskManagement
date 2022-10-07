@@ -18,5 +18,7 @@
         "type": "Property",
         "value": "Measure 01"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
+    ]
 }
