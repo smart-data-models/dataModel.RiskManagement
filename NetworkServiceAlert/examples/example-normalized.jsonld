@@ -69,5 +69,7 @@
             "@value": "2021-02-18T12:00:00Z"
         }
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
+    ]
 }
