@@ -1,15 +1,31 @@
-Entidad: Exposición  
-===================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: Exposición  
+===================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Exposure/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Esta entidad contiene una descripción armonizada de una Entidad de Exposición genérica realizada para el dominio de la Evaluación de Riesgos.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descripción global: **Esta entidad contiene una descripción armonizada de una entidad de exposición genérica realizada para el ámbito de la evaluación de riesgos.**  
+versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `analysisType`: El tipo de análisis.  - `analyzedAt`: La hora a la que terminó el análisis  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `contentInformation`: Matriz de objetos que describe el Mapa de Exposición y contiene sus ids, valores y colores.  - `createsLayers`: Matriz de URIs de las capas creadas por esta entidad de exposición.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `isAffectedBy`: El ID del SMAnalysis que afecta a esta entidad de exposición.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Exposición.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `analysisType[string]`: El tipo de análisis.  - `analyzedAt[string]`: La hora a la que terminó el análisis  . Model: [https://schema.org/Time](https://schema.org/Time)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `contentInformation[array]`: Matriz de objetos que describe el Mapa de Exposición y contiene sus ids, valores y colores.  - `createsLayers[array]`: Matriz de URIs de las capas creadas por esta entidad de exposición.  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `isAffectedBy[*]`: El ID del SMAnalysis que afecta a esta entidad de exposición.  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI-LD. Debe ser igual a Exposición.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Exposure:    
@@ -334,11 +350,22 @@ Exposure:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Exposure/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Exposure/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Exposición de valores clave NGSI-v2 Ejemplo  
 Aquí hay un ejemplo de una Exposición en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Exposure.01",  
@@ -396,8 +423,10 @@ Exposure:
   ]  
 }  
 ```  
+</details>  
 #### Exposición NGSI-v2 normalizada Ejemplo  
 Aquí hay un ejemplo de una Exposición en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Exposure.01",  
@@ -473,149 +502,163 @@ Exposure:
   }  
 }  
 ```  
+</details>  
 #### Exposición NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de una Exposición en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Exposure:01",  
-  "type": "Exposure",  
-  "analyzedAt": "2020-12-24T12:00:00Z",  
-  "analysisType": "Flood Exposure Maps",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          23.6627,  
-          41.88768  
-        ],  
-        [  
-          25.85598,  
-          43.38622  
-        ],  
-        [  
-          23.4899,  
-          43.78691  
-        ],  
-        [  
-          22.35609,  
-          42.28869  
-        ],  
-        [  
-          23.6627,  
-          41.88769  
+    "id": "urn:ngsi-ld:Exposure:01",  
+    "type": "Exposure",  
+    "analysisType": "Flood Exposure Maps",  
+    "analyzedAt": "2020-12-24T12:00:00Z",  
+    "contentInformation": [  
+        {  
+            "id": 0,  
+            "value": "Low",  
+            "color": "(170, 255, 0)"  
+        },  
+        {  
+            "id": 1,  
+            "value": "Medium",  
+            "color": "(255, 255, 0)"  
+        },  
+        {  
+            "id": 2,  
+            "value": "High",  
+            "color": "(255, 170, 0)"  
+        }  
+    ],  
+    "createsLayers": [  
+        "urn:ngsi-ld:EOGeoDataLayer:03",  
+        "urn:ngsi-ld:EOGeoDataLayer:04"  
+    ],  
+    "isAffectedBy": "urn:ngsi-ld:SMAnalysis:01",  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    23.6627,  
+                    41.88768  
+                ],  
+                [  
+                    25.85598,  
+                    43.38622  
+                ],  
+                [  
+                    23.4899,  
+                    43.78691  
+                ],  
+                [  
+                    22.35609,  
+                    42.28869  
+                ],  
+                [  
+                    23.6627,  
+                    41.88769  
+                ]  
+            ]  
         ]  
-      ]  
+    },  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsond",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "contentInformation": [  
-    {  
-      "id": 0,  
-      "value": "Low",  
-      "color": "(170, 255, 0)"  
-    },  
-    {  
-      "id": 1,  
-      "value": "Medium",  
-      "color": "(255, 255, 0)"  
-    },  
-    {  
-      "id": 2,  
-      "value": "High",  
-      "color": "(255, 170, 0)"  
-    }  
-  ],  
-  "isAffectedBy": "urn:ngsi-ld:SMAnalysis:01",  
-  "createsLayers": [  
-    "urn:ngsi-ld:EOGeoDataLayer:03",  
-    "urn:ngsi-ld:EOGeoDataLayer:04"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsond"  
-  ]  
 }  
 ```  
+</details>  
 #### Exposición NGSI-LD normalizada Ejemplo  
-He aquí un ejemplo de una Exposición en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Este es un ejemplo de una Exposición en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Exposure:01",  
-  "type": "Exposure",  
-  "analyzedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-24T12:00:00Z"  
-    }  
-  },  
-  "analysisType": {  
-    "type": "Property",  
-    "value": "Flood Exposure Maps"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            23.6627,  
-            41.88768  
-          ],  
-          [  
-            25.85598,  
-            43.38622  
-          ],  
-          [  
-            23.4899,  
-            43.78691  
-          ],  
-          [  
-            22.35609,  
-            42.28869  
-          ],  
-          [  
-            23.6627,  
-            41.88769  
-          ]  
+    "id": "urn:ngsi-ld:Exposure:01",  
+    "type": "Exposure",  
+    "analysisType": {  
+        "type": "Property",  
+        "value": "Flood Exposure Maps"  
+    },  
+    "analyzedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-12-24T12:00:00Z"  
+        }  
+    },  
+    "contentInformation": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "id": 0,  
+                "value": "Low",  
+                "color": "(170, 255, 0)"  
+            },  
+            {  
+                "id": 1,  
+                "value": "Medium",  
+                "color": "(255, 255, 0)"  
+            },  
+            {  
+                "id": 2,  
+                "value": "High",  
+                "color": "(255, 170, 0)"  
+            }  
         ]  
-      ]  
-    }  
-  },  
-  "contentInformation": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "id": 0,  
-        "value": "Low",  
-        "color": "(170, 255, 0)"  
-      },  
-      {  
-        "id": 1,  
-        "value": "Medium",  
-        "color": "(255, 255, 0)"  
-      },  
-      {  
-        "id": 2,  
-        "value": "High",  
-        "color": "(255, 170, 0)"  
-      }  
+    },  
+    "createsLayers": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:EOGeoDataLayer:03",  
+            "urn:ngsi-ld:EOGeoDataLayer:04"  
+        ]  
+    },  
+    "isAffectedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SMAnalysis:01"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        23.6627,  
+                        41.88768  
+                    ],  
+                    [  
+                        25.85598,  
+                        43.38622  
+                    ],  
+                    [  
+                        23.4899,  
+                        43.78691  
+                    ],  
+                    [  
+                        22.35609,  
+                        42.28869  
+                    ],  
+                    [  
+                        23.6627,  
+                        41.88769  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://smartdatamodels.org/context.jsond",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "isAffectedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SMAnalysis:01"  
-  },  
-  "createsLayers": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:EOGeoDataLayer:03",  
-      "urn:ngsi-ld:EOGeoDataLayer:04"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsond"  
-  ]  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
