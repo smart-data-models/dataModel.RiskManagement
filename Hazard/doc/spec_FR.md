@@ -1,15 +1,31 @@
-Entité : Hazard  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Hazard  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Hazard/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'une entité de risque générique conçue pour le domaine de l'évaluation des risques**.  
+version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `analysisType`: Le type d'analyse.  - `analyzedAt`: L'heure à laquelle l'analyse s'est terminée  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `contentInformation`: Tableau d'objets décrivant la carte des dangers et contenant ses identifiants, valeurs et couleurs.  - `createsLayers`: Tableau d'URIs des couches créées par cet aléa.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `isAffectedByEO`: L'ID de l'analyse d'impact environnemental qui a identifié ce danger.  - `isAffectedByGIS`: L'ID de la donnée SIG qui a identifié ce danger.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Hazard.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `analysisType[string]`: Le type d'analyse.  - `analyzedAt[string]`: L'heure à laquelle l'analyse s'est terminée  . Model: [https://schema.org/Time](https://schema.org/Time)- `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `contentInformation[array]`: Tableau d'objets décrivant la carte des dangers et contenant ses identifiants, valeurs et couleurs.  - `createsLayers[array]`: Tableau d'URIs des couches créées par cet aléa.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `isAffectedByEO[*]`: L'ID de l'analyse d'impact environnemental qui a identifié ce danger.  - `isAffectedByGIS[*]`: L'ID de la donnée SIG qui a identifié ce danger.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI-LD. Il doit être égal à Hazard.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `type`  ## Description des propriétés du modèle de données  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Hazard:    
@@ -355,9 +371,14 @@ Hazard:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Hazard NGSI-v2 key-values Exemple  
 Voici un exemple d'un Hazard au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Hazard:01",  
@@ -416,8 +437,10 @@ Hazard:
   ]  
 }  
 ```  
+</details>  
 #### Danger NGSI-v2 normalisé Exemple  
 Voici un exemple d'un Hazard au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Hazard.01",  
@@ -497,151 +520,166 @@ Hazard:
   }  
 }  
 ```  
-#### Valeurs-clés NGSI-LD de danger Exemple  
+</details>  
+#### Valeurs-clés NGSI-LD de risque Exemple  
 Voici un exemple d'un Hazard au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Hazard:01",  
-  "type": "Hazard",  
-  "analyzedAt": "2021-02-18T12:00:00Z",  
-  "analysisType": "Flood Hazard Maps",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          23.6627,  
-          41.88768  
-        ],  
-        [  
-          25.85598,  
-          43.38622  
-        ],  
-        [  
-          23.4899,  
-          43.78691  
-        ],  
-        [  
-          22.35609,  
-          42.28869  
-        ],  
-        [  
-          23.6627,  
-          41.88769  
+    "id": "urn:ngsi-ld:Hazard:01",  
+    "type": "Hazard",  
+    "analysisType": "Flood Hazard Maps",  
+    "analyzedAt": "2021-02-18T12:00:00Z",  
+    "contentInformation": [  
+        {  
+            "id": 0,  
+            "value": "Low",  
+            "color": "(170, 255, 0)"  
+        },  
+        {  
+            "id": 1,  
+            "value": "Medium",  
+            "color": "(255, 255, 0)"  
+        },  
+        {  
+            "id": 2,  
+            "value": "High",  
+            "color": "(255, 170, 0)"  
+        }  
+    ],  
+    "createsLayers": [  
+        "urn:ngsi-ld:EOGeoDataLayer:05",  
+        "urn:ngsi-ld:EOGeoDataLayer:06"  
+    ],  
+    "isAffectedByEO": "urn:ngsi-ld:EOAnalysis:01",  
+    "isAffectedByGIS": "urn:ngsi-ld:GISData:01",  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    23.6627,  
+                    41.88768  
+                ],  
+                [  
+                    25.85598,  
+                    43.38622  
+                ],  
+                [  
+                    23.4899,  
+                    43.78691  
+                ],  
+                [  
+                    22.35609,  
+                    42.28869  
+                ],  
+                [  
+                    23.6627,  
+                    41.88769  
+                ]  
+            ]  
         ]  
-      ]  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "contentInformation": [  
-    {  
-      "id": 0,  
-      "value": "Low",  
-      "color": "(170, 255, 0)"  
-    },  
-    {  
-      "id": 1,  
-      "value": "Medium",  
-      "color": "(255, 255, 0)"  
-    },  
-    {  
-      "id": 2,  
-      "value": "High",  
-      "color": "(255, 170, 0)"  
-    }  
-  ],  
-  "isAffectedByGIS": "urn:ngsi-ld:GISData:01",  
-  "isAffectedByEO": "urn:ngsi-ld:EOAnalysis:01",  
-  "createsLayers": [  
-    "urn:ngsi-ld:EOGeoDataLayer:05",  
-    "urn:ngsi-ld:EOGeoDataLayer:06"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Risque NGSI-LD normalisé Exemple  
 Voici un exemple d'un Hazard au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Hazard:01",  
-  "type": "Hazard",  
-  "analyzedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-18T12:00:00Z"  
-    }  
-  },  
-  "analysisType": {  
-    "type": "Property",  
-    "value": "Flood Hazard Maps"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            23.6627,  
-            41.88768  
-          ],  
-          [  
-            25.85598,  
-            43.38622  
-          ],  
-          [  
-            23.4899,  
-            43.78691  
-          ],  
-          [  
-            22.35609,  
-            42.28869  
-          ],  
-          [  
-            23.6627,  
-            41.88769  
-          ]  
+    "id": "urn:ngsi-ld:Hazard:01",  
+    "type": "Hazard",  
+    "analysisType": {  
+        "type": "Property",  
+        "value": "Flood Hazard Maps"  
+    },  
+    "analyzedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "contentInformation": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "id": 0,  
+                "value": "Low",  
+                "color": "(170, 255, 0)"  
+            },  
+            {  
+                "id": 1,  
+                "value": "Medium",  
+                "color": "(255, 255, 0)"  
+            },  
+            {  
+                "id": 2,  
+                "value": "High",  
+                "color": "(255, 170, 0)"  
+            }  
         ]  
-      ]  
-    }  
-  },  
-  "contentInformation": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "id": 0,  
-        "value": "Low",  
-        "color": "(170, 255, 0)"  
-      },  
-      {  
-        "id": 1,  
-        "value": "Medium",  
-        "color": "(255, 255, 0)"  
-      },  
-      {  
-        "id": 2,  
-        "value": "High",  
-        "color": "(255, 170, 0)"  
-      }  
+    },  
+    "createsLayers": {  
+        "type": "Property",  
+        "object": [  
+            "urn:ngsi-ld:EOGeoDataLayer.05",  
+            "urn:ngsi-ld:EOGeoDataLayer.06"  
+        ]  
+    },  
+    "isAffectedByEO": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:EOAnalysis.01"  
+    },  
+    "isAffectedByGIS": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GISData.01"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        23.6627,  
+                        41.88768  
+                    ],  
+                    [  
+                        25.85598,  
+                        43.38622  
+                    ],  
+                    [  
+                        23.4899,  
+                        43.78691  
+                    ],  
+                    [  
+                        22.35609,  
+                        42.28869  
+                    ],  
+                    [  
+                        23.6627,  
+                        41.88769  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "isAffectedByGIS": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GISData.01"  
-  },  
-  "isAffectedByEO": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:EOAnalysis.01"  
-  },  
-  "createsLayers": {  
-    "type": "Property",  
-    "object": [  
-      "urn:ngsi-ld:EOGeoDataLayer.05",  
-      "urn:ngsi-ld:EOGeoDataLayer.06"  
-    ]  
-  }  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
