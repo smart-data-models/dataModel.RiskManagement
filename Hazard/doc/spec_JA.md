@@ -1,15 +1,31 @@
-エンティティハザード  
-==========  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティハザード  
+==========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Hazard/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、リスクアセスメントドメイン用に作成された一般的なHazardエンティティの調和のとれた記述が含まれています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、リスクアセスメント領域のために作られた一般的なハザードエンティティの調和された記述を含んでいます。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `analysisType`: 分析の種類です。  - `analyzedAt`: 分析が終了した時刻  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `contentInformation`: ハザードマップを説明するオブジェクトの配列で、ID、値、色を含みます。  - `createsLayers`: このハザードで作成されたレイヤーのURIの配列。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `isAffectedByEO`: このハザードを特定したEOAnalysisのID。  - `isAffectedByGIS`: このハザードを特定したGISデータのID。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Hazardと同じである必要があります。    
-必須項目  
-- `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `analysisType[string]`: 解析の種類。  - `analyzedAt[string]`: 解析が終了した時刻  . Model: [https://schema.org/Time](https://schema.org/Time)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contentInformation[array]`: ハザードマップを記述するオブジェクトの配列で、そのid、値、色を含む。  - `createsLayers[array]`: このハザードによって作成されたレイヤーの URI の配列。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `isAffectedByEO[*]`: このハザードを特定したEOAnalysisのID。  - `isAffectedByGIS[*]`: このハザードを特定した GISData の ID。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI-LD エンティティタイプ。Hazardと等しくなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Hazard:    
@@ -355,9 +371,14 @@ Hazard:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### ハザードNGSI-v2のキーバリューの例  
-Hazardをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ハザードNGSI-v2キーバリューの例  
+ここでは、HazardをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Hazard:01",  
@@ -416,8 +437,10 @@ Hazard:
   ]  
 }  
 ```  
+</details>  
 #### ハザード NGSI-v2 正規化例  
-ここでは、JSON-LD形式のHazardを正規化した例を示します。これはオプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、HazardをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Hazard.01",  
@@ -497,151 +520,166 @@ Hazard:
   }  
 }  
 ```  
-#### ハザードNGSI-LDのキーバリューの例  
-Hazardをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ハザードNGSI-LDのキー値例  
+ここでは、HazardをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Hazard:01",  
-  "type": "Hazard",  
-  "analyzedAt": "2021-02-18T12:00:00Z",  
-  "analysisType": "Flood Hazard Maps",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          23.6627,  
-          41.88768  
-        ],  
-        [  
-          25.85598,  
-          43.38622  
-        ],  
-        [  
-          23.4899,  
-          43.78691  
-        ],  
-        [  
-          22.35609,  
-          42.28869  
-        ],  
-        [  
-          23.6627,  
-          41.88769  
+    "id": "urn:ngsi-ld:Hazard:01",  
+    "type": "Hazard",  
+    "analysisType": "Flood Hazard Maps",  
+    "analyzedAt": "2021-02-18T12:00:00Z",  
+    "contentInformation": [  
+        {  
+            "id": 0,  
+            "value": "Low",  
+            "color": "(170, 255, 0)"  
+        },  
+        {  
+            "id": 1,  
+            "value": "Medium",  
+            "color": "(255, 255, 0)"  
+        },  
+        {  
+            "id": 2,  
+            "value": "High",  
+            "color": "(255, 170, 0)"  
+        }  
+    ],  
+    "createsLayers": [  
+        "urn:ngsi-ld:EOGeoDataLayer:05",  
+        "urn:ngsi-ld:EOGeoDataLayer:06"  
+    ],  
+    "isAffectedByEO": "urn:ngsi-ld:EOAnalysis:01",  
+    "isAffectedByGIS": "urn:ngsi-ld:GISData:01",  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    23.6627,  
+                    41.88768  
+                ],  
+                [  
+                    25.85598,  
+                    43.38622  
+                ],  
+                [  
+                    23.4899,  
+                    43.78691  
+                ],  
+                [  
+                    22.35609,  
+                    42.28869  
+                ],  
+                [  
+                    23.6627,  
+                    41.88769  
+                ]  
+            ]  
         ]  
-      ]  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "contentInformation": [  
-    {  
-      "id": 0,  
-      "value": "Low",  
-      "color": "(170, 255, 0)"  
-    },  
-    {  
-      "id": 1,  
-      "value": "Medium",  
-      "color": "(255, 255, 0)"  
-    },  
-    {  
-      "id": 2,  
-      "value": "High",  
-      "color": "(255, 170, 0)"  
-    }  
-  ],  
-  "isAffectedByGIS": "urn:ngsi-ld:GISData:01",  
-  "isAffectedByEO": "urn:ngsi-ld:EOAnalysis:01",  
-  "createsLayers": [  
-    "urn:ngsi-ld:EOGeoDataLayer:05",  
-    "urn:ngsi-ld:EOGeoDataLayer:06"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### ハザード NGSI-LDの正規化例  
-ここでは、JSON-LD形式のHazardを正規化した例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ハザード NGSI-LD 正規化例  
+ここでは、HazardをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Hazard:01",  
-  "type": "Hazard",  
-  "analyzedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-18T12:00:00Z"  
-    }  
-  },  
-  "analysisType": {  
-    "type": "Property",  
-    "value": "Flood Hazard Maps"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            23.6627,  
-            41.88768  
-          ],  
-          [  
-            25.85598,  
-            43.38622  
-          ],  
-          [  
-            23.4899,  
-            43.78691  
-          ],  
-          [  
-            22.35609,  
-            42.28869  
-          ],  
-          [  
-            23.6627,  
-            41.88769  
-          ]  
+    "id": "urn:ngsi-ld:Hazard:01",  
+    "type": "Hazard",  
+    "analysisType": {  
+        "type": "Property",  
+        "value": "Flood Hazard Maps"  
+    },  
+    "analyzedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "contentInformation": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "id": 0,  
+                "value": "Low",  
+                "color": "(170, 255, 0)"  
+            },  
+            {  
+                "id": 1,  
+                "value": "Medium",  
+                "color": "(255, 255, 0)"  
+            },  
+            {  
+                "id": 2,  
+                "value": "High",  
+                "color": "(255, 170, 0)"  
+            }  
         ]  
-      ]  
-    }  
-  },  
-  "contentInformation": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "id": 0,  
-        "value": "Low",  
-        "color": "(170, 255, 0)"  
-      },  
-      {  
-        "id": 1,  
-        "value": "Medium",  
-        "color": "(255, 255, 0)"  
-      },  
-      {  
-        "id": 2,  
-        "value": "High",  
-        "color": "(255, 170, 0)"  
-      }  
+    },  
+    "createsLayers": {  
+        "type": "Property",  
+        "object": [  
+            "urn:ngsi-ld:EOGeoDataLayer.05",  
+            "urn:ngsi-ld:EOGeoDataLayer.06"  
+        ]  
+    },  
+    "isAffectedByEO": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:EOAnalysis.01"  
+    },  
+    "isAffectedByGIS": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:GISData.01"  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        23.6627,  
+                        41.88768  
+                    ],  
+                    [  
+                        25.85598,  
+                        43.38622  
+                    ],  
+                    [  
+                        23.4899,  
+                        43.78691  
+                    ],  
+                    [  
+                        22.35609,  
+                        42.28869  
+                    ],  
+                    [  
+                        23.6627,  
+                        41.88769  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "isAffectedByGIS": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:GISData.01"  
-  },  
-  "isAffectedByEO": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:EOAnalysis.01"  
-  },  
-  "createsLayers": {  
-    "type": "Property",  
-    "object": [  
-      "urn:ngsi-ld:EOGeoDataLayer.05",  
-      "urn:ngsi-ld:EOGeoDataLayer.06"  
-    ]  
-  }  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
