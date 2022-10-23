@@ -1,15 +1,31 @@
-Entité : Risque  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Risque  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.RiskManagement/blob/master/Risk/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Description globale : **Effet de l'incertitude sur les objectifs. Un effet est une déviation par rapport à ce qui est attendu - positif et/ou négatif. Les objectifs peuvent avoir différents aspects (tels que des objectifs financiers, de santé et de sécurité, et environnementaux) et peuvent s'appliquer à différents niveaux (tels que stratégique, à l'échelle de l'organisation, projet, produit et processus). Le risque est souvent caractérisé par la référence à des événements et des conséquences potentiels, ou une combinaison de ceux-ci. Le risque est souvent exprimé en termes d'une combinaison des conséquences d'un événement (y compris les changements de circonstances) et de la probabilité d'occurrence associée. L'incertitude est l'état, même partiel, de l'absence d'informations relatives à la compréhension ou à la connaissance d'un événement, de ses conséquences ou de sa probabilité.  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Description globale : **Effet de l'incertitude sur les objectifs. Un effet est une déviation par rapport à ce qui est attendu - positif et/ou négatif. Les objectifs peuvent avoir différents aspects (tels que des objectifs financiers, de santé et de sécurité, et environnementaux) et peuvent s'appliquer à différents niveaux (tels que stratégique, à l'échelle de l'organisation, projet, produit et processus). Le risque est souvent caractérisé par la référence à des événements et des conséquences potentiels, ou une combinaison de ceux-ci. Le risque est souvent exprimé en termes d'une combinaison des conséquences d'un événement (y compris les changements de circonstances) et de la probabilité d'occurrence associée. L'incertitude est l'état, même partiel, d'insuffisance d'informations liées à la compréhension ou à la connaissance d'un événement, de ses conséquences ou de sa probabilité.**  
+version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `affects`: Tableau d'URIs liés à la zone dans laquelle le risque pourrait affecter.  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `consequence`: La conséquence causée par la matérialisation d'un risque. Enum : 'qualité, quantité, réputation'.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: La description du risque dans un langage naturel  - `event`: Occurrence ou changement d'un ensemble particulier de circonstances. Enum : 'destruction, interruption, manipulation, pollution'.  - `id`: Identifiant unique de l'entité  - `isOutputOf`: Tableau des URI des différentes couches de données géospatiales.  - `linkTo`: Tableau des URI liés aux mesures d'atténuation.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `mitigatedBy`: Tableau des URI liés aux mesures d'atténuation.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `severity`: L'impact généré par le risque associé. Enum : 'LOW, MEDIUM, HIGH' (faible, moyen, élevé)  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `sourceRisk`: Tableau d'URI liés à la source du risque, qui peut être une personne, un système numérique, etc.  - `threat`: La cause potentielle d'un incident qui peut entraîner une violation de la sécurité des informations ou compromettre les opérations commerciales. Enum : 'cyber, cyber-physique, physique'.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Risk.  - `validFrom`: L'heure à laquelle la matérialisation du risque est terminée.  - `validTo`: L'heure à laquelle la matérialisation du risque commence.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `affects[array]`: Tableau d'URIs liés à la zone dans laquelle le risque pourrait affecter.  - `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: La conséquence causée par la matérialisation d'un risque. Enum : 'qualité, quantité, réputation'.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: La description du risque dans un langage naturel  - `event[string]`: Occurrence ou changement d'un ensemble particulier de circonstances. Enum : 'destruction, interruption, manipulation, pollution'.  - `id[*]`: Identifiant unique de l'entité  - `isOutputOf[array]`: Tableau des URI des différentes couches de données géospatiales.  - `linkTo[array]`: Tableau des URI liés aux mesures d'atténuation.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `mitigatedBy[array]`: Tableau des URI liés aux mesures d'atténuation.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `severity[string]`: L'impact généré par le risque associé. Enum : 'LOW, MEDIUM, HIGH' (faible, moyen, élevé)  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `sourceRisk[array]`: Tableau d'URI liés à la source du risque, qui peut être une personne, un système numérique, etc.  - `threat[string]`: La cause potentielle d'un incident qui peut entraîner une violation de la sécurité des informations ou compromettre les opérations commerciales. Enum : 'cyber, cyber-physique, physique'.  - `type[string]`: Type d'entité NGSI-LD. Il doit être égal à Risk.  - `validFrom[string]`: L'heure à laquelle la matérialisation du risque est terminée.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[string]`: L'heure à laquelle la matérialisation du risque commence.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `type`  ## Description des propriétés du modèle de données  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Risk:    
@@ -406,11 +422,22 @@ Risk:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Risk/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Risk/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Risque Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de risque au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Risk:01",  
@@ -467,8 +494,10 @@ Risk:
   ]  
 }  
 ```  
+</details>  
 #### Risque NGSI-v2 normalisé Exemple  
 Voici un exemple de risque au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Risk:01",  
@@ -564,171 +593,183 @@ Risk:
   }  
 }  
 ```  
+</details>  
 #### Risque Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de risque au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Risk:01",  
-  "type": "Risk",  
-  "validFrom": "2021-02-18T12:00:00Z",  
-  "validTo": "2021-02-18T12:00:00Z",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          23.6627,  
-          41.88768  
-        ],  
-        [  
-          25.85598,  
-          43.38622  
-        ],  
-        [  
-          23.4899,  
-          43.78691  
-        ],  
-        [  
-          22.35609,  
-          42.28869  
-        ],  
-        [  
-          23.6627,  
-          41.88769  
+    "id": "urn:ngsi-ld:Risk:01",  
+    "type": "Risk",  
+    "affects": [  
+        "urn:ngsi-ld:ServiceGISData:01"  
+    ],  
+    "consequence": "reputation",  
+    "description": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure",  
+    "event": "interruption",  
+    "isOutputOf": [  
+        "urn:ngsi-ld:EOGeoDataLayer:01",  
+        "urn:ngsi-ld:EOGeoDataLayer:01"  
+    ],  
+    "linkTo": [  
+        "urn:ngsi-ld:Risk:02"  
+    ],  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    23.6627,  
+                    41.88768  
+                ],  
+                [  
+                    25.85598,  
+                    43.38622  
+                ],  
+                [  
+                    23.4899,  
+                    43.78691  
+                ],  
+                [  
+                    22.35609,  
+                    42.28869  
+                ],  
+                [  
+                    23.6627,  
+                    41.88769  
+                ]  
+            ]  
         ]  
-      ]  
+    },  
+    "mitigatedBy": [  
+        "urn:ngsi-ld:Mitigation:01"  
+    ],  
+    "severity": "MEDIUM",  
+    "sourceRisk": [  
+        "urn:ngsi-ld:Attacker:01"  
+    ],  
+    "threat": "physical",  
+    "validFrom": "2021-02-18T12:00:00Z",  
+    "validTo": "2021-02-18T12:00:00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "consequence": "reputation",  
-  "description": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure",  
-  "event": "interruption",  
-  "threat": "physical",  
-  "severity": "MEDIUM",  
-  "isOutputOf": [  
-    "urn:ngsi-ld:EOGeoDataLayer:01",  
-    "urn:ngsi-ld:EOGeoDataLayer:01"  
-  ],  
-  "sourceRisk": [  
-    "urn:ngsi-ld:Attacker:01"  
-  ],  
-  "affects": [  
-    "urn:ngsi-ld:ServiceGISData:01"  
-  ],  
-  "mitigatedBy": [  
-    "urn:ngsi-ld:Mitigation:01"  
-  ],  
-  "linkTo": [  
-    "urn:ngsi-ld:Risk:02"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Risque NGSI-LD normalisé Exemple  
 Voici un exemple de risque au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@id": "urn:ngsi-ld:Risk:01",  
-  "@type": "Risk",  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-18T12:00:00Z"  
-    }  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-18T12:00:00Z"  
-    }  
-  },  
-  "location": {  
-    "@type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            23.6627,  
-            41.88768  
-          ],  
-          [  
-            25.85598,  
-            43.38622  
-          ],  
-          [  
-            23.4899,  
-            43.78691  
-          ],  
-          [  
-            22.35609,  
-            42.28869  
-          ],  
-          [  
-            23.6627,  
-            41.88769  
-          ]  
+    "@id": "urn:ngsi-ld:Risk:01",  
+    "@type": "Risk",  
+    "affects": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:ServiceGISData:01"  
         ]  
-      ]  
-    }  
-  },  
-  "consequence": {  
-    "type": "Property",  
-    "value": "Reputation"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure"  
-  },  
-  "event": {  
-    "type": "Property",  
-    "value": "interruption"  
-  },  
-  "threat": {  
-    "type": "Property",  
-    "value": "physical"  
-  },  
-  "severity": {  
-    "type": "Property",  
-    "value": "MEDIUM"  
-  },  
-  "isOutputOf": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:EOGeoDataLayer:01",  
-      "urn:ngsi-ld:EOGeoDataLayer:01"  
+    },  
+    "consequence": {  
+        "type": "Property",  
+        "value": "Reputation"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure"  
+    },  
+    "event": {  
+        "type": "Property",  
+        "value": "interruption"  
+    },  
+    "isOutputOf": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:EOGeoDataLayer:01",  
+            "urn:ngsi-ld:EOGeoDataLayer:01"  
+        ]  
+    },  
+    "linkTo": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:Risk:02"  
+        ]  
+    },  
+    "location": {  
+        "@type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        23.6627,  
+                        41.88768  
+                    ],  
+                    [  
+                        25.85598,  
+                        43.38622  
+                    ],  
+                    [  
+                        23.4899,  
+                        43.78691  
+                    ],  
+                    [  
+                        22.35609,  
+                        42.28869  
+                    ],  
+                    [  
+                        23.6627,  
+                        41.88769  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "mitigatedBy": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:Mitigation:01"  
+        ]  
+    },  
+    "severity": {  
+        "type": "Property",  
+        "value": "MEDIUM"  
+    },  
+    "sourceRisk": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Attacker:01"  
+        ]  
+    },  
+    "threat": {  
+        "type": "Property",  
+        "value": "physical"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-18T12:00:00Z"  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
     ]  
-  },  
-  "sourceRisk": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Attacker:01"  
-    ]  
-  },  
-  "affects": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:ServiceGISData:01"  
-    ]  
-  },  
-  "mitigatedBy": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:Mitigation:01"  
-    ]  
-  },  
-  "linkTo": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:Risk:02"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
