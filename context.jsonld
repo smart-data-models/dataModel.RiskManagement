@@ -1,5 +1,15 @@
 {
     "@context": {
+        "Asset": "https://smartdatamodels.org/dataModel.RiskManagement/Asset",
+        "CyberAnalysis": "https://smartdatamodels.org/dataModel.RiskManagement/CyberAnalysis",
+        "Exposure": "https://smartdatamodels.org/dataModel.RiskManagement/Exposure",
+        "GISData": "https://smartdatamodels.org/dataModel.RiskManagement/GISData",
+        "Hazard": "https://smartdatamodels.org/dataModel.RiskManagement/Hazard",
+        "Measure": "https://smartdatamodels.org/dataModel.RiskManagement/Measure",
+        "Mitigation": "https://smartdatamodels.org/dataModel.RiskManagement/Mitigation",
+        "NetworkServiceAlert": "https://smartdatamodels.org/dataModel.RiskManagement/NetworkServiceAlert",
+        "Risk": "https://smartdatamodels.org/dataModel.RiskManagement/Risk",
+        "Vulnerability": "https://smartdatamodels.org/dataModel.RiskManagement/Vulnerability",
         "action": "https://smartdatamodels.org/dataModel.RiskManagement/action",
         "address": "https://smartdatamodels.org/address",
         "affects": "https://smartdatamodels.org/dataModel.RiskManagement/affects",
