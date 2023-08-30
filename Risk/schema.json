@@ -17,7 +17,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to Risk.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Risk",
                     "enum": [
                         "Risk"
                     ]
@@ -25,12 +25,12 @@
                 "validTo": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The time at which the risk materialization is started."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The time at which the risk materialization is started"
                 },
                 "validFrom": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The time at which the risk materialization is finished."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The time at which the risk materialization is finished"
                 },
                 "consequence": {
                     "type": "string",
@@ -95,7 +95,7 @@
                 },
                 "sourceRisk": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to the source of the Risk that can be a Person, a Digital System, etc.",
+                    "description": "Relationship. Array of URIs related to the source of the Risk that can be a Person, a Digital System, etc",
                     "items": {
                         "anyOf": [
                             {
@@ -115,7 +115,7 @@
                 },
                 "affects": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to the area in which the risk could affect.",
+                    "description": "Relationship. Array of URIs related to the area in which the risk could affect",
                     "items": {
                         "anyOf": [
                             {
@@ -135,7 +135,7 @@
                 },
                 "mitigatedBy": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to the Mitigation Measures.",
+                    "description": "Relationship. Array of URIs related to the Mitigation Measures",
                     "items": {
                         "anyOf": [
                             {
@@ -155,7 +155,7 @@
                 },
                 "linkTo": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to the Mitigation Measures.",
+                    "description": "Relationship. Array of URIs related to the Mitigation Measures",
                     "items": {
                         "anyOf": [
                             {
