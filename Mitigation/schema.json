@@ -17,7 +17,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to Risk.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Risk",
                     "enum": [
                         "Mitigation"
                     ]
@@ -25,12 +25,12 @@
                 "validTo": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Time'. The time at which the risk materialization is started."
+                    "description": "Property. Model:'https://schema.org/Time'. The time at which the risk materialization is started"
                 },
                 "validFrom": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Time'. The time at which the risk materialization is finished."
+                    "description": "Property. Model:'https://schema.org/Time'. The time at which the risk materialization is finished"
                 },
                 "consequence": {
                     "type": "string",
@@ -70,7 +70,7 @@
                 },
                 "affects": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to the area in which the risk could affect.",
+                    "description": "Relationship. Array of URIs related to the area in which the risk could affect",
                     "items": {
                         "anyOf": [
                             {
@@ -90,7 +90,7 @@
                 },
                 "apply": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs related to Measures associated to the mitigation.",
+                    "description": "Relationship. Array of URIs related to Measures associated to the mitigation",
                     "items": {
                         "anyOf": [
                             {
