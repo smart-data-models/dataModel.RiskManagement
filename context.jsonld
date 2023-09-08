@@ -21,9 +21,18 @@
         "analyzedAt": "https://smartdatamodels.org/dataModel.RiskManagement/analyzedAt",
         "apply": "https://smartdatamodels.org/dataModel.RiskManagement/apply",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "category": "https://smartdatamodels.org/dataModel.RiskManagement/category",
+        "color": "https://smartdatamodels.org/color",
         "consequence": "https://smartdatamodels.org/dataModel.RiskManagement/consequence",
         "contentInformation": "https://smartdatamodels.org/dataModel.RiskManagement/contentInformation",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "createsLayers": "https://smartdatamodels.org/dataModel.RiskManagement/createsLayers",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -59,8 +68,9 @@
         "subcategory": "https://smartdatamodels.org/dataModel.RiskManagement/subcategory",
         "threat": "https://smartdatamodels.org/dataModel.RiskManagement/threat",
         "type": "@type",
-        "validFrom": "https://smartdatamodels.org/dataModel.RiskManagement/validFrom",
+        "validFrom": "https://smartdatamodels.org/validFrom",
         "validTo": "https://smartdatamodels.org/dataModel.RiskManagement/validTo",
+        "value": "ngsi-ld:hasValue",
         "vulnerabilityValues": "https://smartdatamodels.org/dataModel.RiskManagement/vulnerabilityValues"
     }
 }
