@@ -17,7 +17,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to GISData.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to GISData",
                     "enum": [
                         "GISData"
                     ]
@@ -25,7 +25,7 @@
                 "analyzedAt": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Time'. The time at which the analysis finished."
+                    "description": "Property. Model:'https://schema.org/Time'. The time at which the analysis finished"
                 },
                 "identifiesVulnerability": {
                     "anyOf": [
@@ -42,11 +42,11 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. The ID of the Vulnerability Entity that is identified by this data."
+                    "description": "Relationship. The ID of the Vulnerability Entity that is identified by this data"
                 },
                 "isMappedBy": {
                     "type": "array",
-                    "description": "Relationship. Array of URIs of the GeoDataLayers, which this GISData Entity employs.",
+                    "description": "Relationship. Array of URIs of the GeoDataLayers, which this GISData Entity employs",
                     "items": {
                         "anyOf": [
                             {

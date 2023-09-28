@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Exposure of the subject dataModel.RiskManagement for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Exposure_type AS ENUM ('Exposure');
+CREATE TABLE Exposure (address json, alternateName text, analysisType text, analyzedAt timestamp, areaServed text, contentInformation json, createsLayers json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, isAffectedBy text, location json, name text, owner json, seeAlso json, source text, type Exposure_type);

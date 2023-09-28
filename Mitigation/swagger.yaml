@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     The mitigation of consequences reduces the risk after an event has occurred. Therefore, this risk reduction measure is not suitable for the reduction of the likelihood of events but for the reduction of the negative consequences. Examples for consequence mitigation measures could be e.g. the construction of connection pipes to the neighbor water supplier(s) to get water from them in case of a breakdown of the own water supply, the construction of wells for an emergency supply or signing of contracts with organizations providing small mobile emergency water treatment plants.
   title: Mitigation
-  version: "1.0.0"
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 
