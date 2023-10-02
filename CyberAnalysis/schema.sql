@@ -1,3 +1,3 @@
-/* (Beta) Export of data model CyberAnalysis of the subject dataModel.RiskManagement for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model CyberAnalysis of the subject dataModel.RiskManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE CyberAnalysis_type AS ENUM ('CyberAnalysis');
-CREATE TABLE CyberAnalysis (address json, affects json, alternateName text, analysisType text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, generate json, id text, location json, name text, owner json, seeAlso json, source text, type CyberAnalysis_type, validFrom timestamp, validTo timestamp);
+CREATE TABLE CyberAnalysis (address JSON, affects JSON, alternateName TEXT, analysisType TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, generate JSON, name TEXT, owner JSON, source TEXT, type CyberAnalysis_type, validFrom TIMESTAMP, validTo TIMESTAMP);
