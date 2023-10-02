@@ -1,3 +1,3 @@
-/* (Beta) Export of data model Hazard of the subject dataModel.RiskManagement for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model Hazard of the subject dataModel.RiskManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Hazard_type AS ENUM ('Hazard');
-CREATE TABLE Hazard (address json, alternateName text, analysisType text, analyzedAt timestamp, areaServed text, contentInformation json, createsLayers json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, isAffectedByEO text, isAffectedByGIS text, location json, name text, owner json, seeAlso json, source text, type Hazard_type);
+CREATE TABLE Hazard (address JSON, alternateName TEXT, analysisType TEXT, analyzedAt TIMESTAMP, areaServed TEXT, contentInformation JSON, createsLayers JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, name TEXT, owner JSON, source TEXT, type Hazard_type);
