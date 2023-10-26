@@ -1,3 +1,3 @@
 /* (Beta) Export of data model GISData of the subject dataModel.RiskManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE GISData_type AS ENUM ('GISData');
-CREATE TABLE GISData (address JSON, alternateName TEXT, analyzedAt TIMESTAMP, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, isMappedBy JSON, name TEXT, owner JSON, source TEXT, type GISData_type);
+CREATE TABLE GISData (address JSON, alternateName TEXT, analyzedAt TIMESTAMP, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, isMappedBy JSON, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type GISData_type);
