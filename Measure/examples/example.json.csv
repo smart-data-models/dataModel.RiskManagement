@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "description_", "action__0__id_", "action__0__value_"
+"urn:ngsi-ld:Measure:01", "Measure", "Measure 01", "Reboot the pumps", "urn:ngsi-ld:Pump:01", "SIGNAL REBOOT"
