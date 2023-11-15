@@ -10,7 +10,7 @@
     "value": "Reboot the pumps"
   },
   "action": {
-    "type": "Array",
+    "type": "StructuredValue",
     "value": [
       {
         "id": "urn:ngsi-ld:Pump:01",
