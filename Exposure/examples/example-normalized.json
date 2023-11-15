@@ -40,7 +40,7 @@
     }
   },
   "contentInformation": {
-    "type": "Array",
+    "type": "StructuredValue",
     "value": [
       {
         "id": 0,
@@ -64,11 +64,10 @@
     "value": "SMAnalysis.01"
   },
   "createsLayers": {
-    "type": "Array",
+    "type": "StructuredValue",
     "value": [
       "EOGeoDataLayer.03",
       "EOGeoDataLayer.04"
     ]
   }
 }
-
