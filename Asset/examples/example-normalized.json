@@ -38,8 +38,5 @@
   "description": {
     "type": "Text",
     "value": "An asset-01 description"
-  },
-  "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
-    ]
+  }
 }
