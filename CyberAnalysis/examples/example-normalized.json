@@ -14,18 +14,15 @@
     "value": "CyberAnalysis-AnomalyDetector"
   },
   "affects": {
-    "type": "Array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Asset:01"
     ]
   },
   "generate": {
-    "type": "Array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:NetworkServiceAlert:01"
     ]
-  },
-  "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
-    ]
+  }
 }
