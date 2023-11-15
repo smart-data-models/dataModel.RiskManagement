@@ -32,7 +32,7 @@
   },
   "identifiesVulnerability": "Vulnerability.01",
   "isMappedBy": [
-	"EOGeoDataLayer.07",
-	"EOGeoDataLayer.08"
-	]
+    "EOGeoDataLayer.07",
+    "EOGeoDataLayer.08"
+  ]
 }
