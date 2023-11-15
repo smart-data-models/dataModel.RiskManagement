@@ -45,28 +45,28 @@
   },
   "consequence": {
     "type": "Text",
-    "value": "Reputation"
+    "value": "reputation"
   },
   "description": {
     "type": "Text",
     "value": "Mitigation01 Corresponds to reboot the pump"
   },
   "event": {
-    "type": "Array",
-    "value": "Interruption"
+    "type": "Text",
+    "value": "interruption"
   },
   "likelihood": {
-    "type": "Property",
+    "type": "Number",
     "value": 0.5
   },
   "affects": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:ServiceGISData:01"
     ]
   },
   "apply": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Measure:01"
     ]
