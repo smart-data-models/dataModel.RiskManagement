@@ -60,7 +60,7 @@
     "value": "T1046 MITRE"
   },
   "identify": {
-    "type": "Text",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Vulnerability:01"
     ]
