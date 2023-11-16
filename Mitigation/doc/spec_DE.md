@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Globale Beschreibung: **Die Minderung der Folgen verringert das Risiko, nachdem ein Ereignis eingetreten ist. Daher ist diese Risikominderungsmaßnahme nicht für die Verringerung der Wahrscheinlichkeit von Ereignissen geeignet, sondern für die Verringerung der negativen Folgen. Beispiele für Maßnahmen zur Folgenminderung könnten z.B. der Bau von Verbindungsleitungen zum/zu den benachbarten Wasserversorger(n) sein, um im Falle eines Ausfalls der eigenen Wasserversorgung Wasser von dort zu beziehen, der Bau von Brunnen für eine Notversorgung oder der Abschluss von Verträgen mit Organisationen, die kleine mobile Notwasseraufbereitungsanlagen bereitstellen.**  
-Version: 0.0.1  
+Version: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
 - `affects[array]`: Reihe von URIs, die sich auf den Bereich beziehen, auf den sich das Risiko auswirken könnte  - `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `apply[array]`: Array von URIs, die sich auf Maßnahmen im Zusammenhang mit der Milderung beziehen  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: Die durch die Verwirklichung eines Risikos verursachte Folge. Enum:'Qualität, Quantität, Ruf'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Die Risikobeschreibung in einer natürlichen Sprache  - `event[string]`: Auftreten oder Veränderung eines bestimmten Sachverhalts. Enum:'Zerstörung, Unterbrechung, Manipulation, Verschmutzung'  - `id[*]`: Eindeutiger Bezeichner der Entität  - `likelihood[number]`: Die Wahrscheinlichkeit, dass etwas eintritt. In der Terminologie des Risikomanagements bezieht sich das Wort "Wahrscheinlichkeit" auf die Chance, dass etwas eintritt, unabhängig davon, ob es objektiv oder subjektiv, qualitativ oder quantitativ definiert, gemessen oder bestimmt und mit allgemeinen Begriffen oder mathematisch beschrieben wird (umfasst auch die Arten der angebotenen Wahrscheinlichkeiten wie LoAH, LoAS, LoC)  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `threat[string]`: Die potenzielle Ursache eines Vorfalls, der zu einer Verletzung der Informationssicherheit führen oder den Geschäftsbetrieb beeinträchtigen kann. Enum:'cyber, physisch, cyber-physisch'  - `type[string]`: NGSI-LD Entitätstyp. Er muss gleich Risiko sein  - `validFrom[date-time]`: Der Zeitpunkt, zu dem die Risikomaterialisierung abgeschlossen ist  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: Der Zeitpunkt, zu dem die Risikomaterialisierung beginnt  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
@@ -445,11 +446,11 @@ Mitigation:
   required: []    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Mitigation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -558,28 +559,28 @@ Mitigation:
   },  
   "consequence": {  
     "type": "Text",  
-    "value": "Reputation"  
+    "value": "reputation"  
   },  
   "description": {  
     "type": "Text",  
     "value": "Mitigation01 Corresponds to reboot the pump"  
   },  
   "event": {  
-    "type": "Array",  
-    "value": "Interruption"  
+    "type": "Text",  
+    "value": "interruption"  
   },  
   "likelihood": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.5  
   },  
   "affects": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:ServiceGISData:01"  
     ]  
   },  
   "apply": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Measure:01"  
     ]  
@@ -592,51 +593,51 @@ Mitigation:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Mitigation:01",  
-    "type": "Mitigation",  
-    "affects": [  
-        "urn:ngsi-ld:ServiceGISData:01"  
-    ],  
-    "apply": [  
-        "urn:ngsi-ld:Measure:01"  
-    ],  
-    "consequence": "reputation",  
-    "description": "Mitigation01 Corresponds to reboot the pump",  
-    "event": "interruption",  
-    "likelihood": 0.5,  
-    "location": {  
-        "type": "Polygon",  
-        "coordinates": [  
-            [  
-                [  
-                    23.6627,  
-                    41.88768  
-                ],  
-                [  
-                    25.85598,  
-                    43.38622  
-                ],  
-                [  
-                    23.4899,  
-                    43.78691  
-                ],  
-                [  
-                    22.35609,  
-                    42.28869  
-                ],  
-                [  
-                    23.6627,  
-                    41.88769  
-                ]  
-            ]  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
         ]  
-    },  
-    "threat": "physical",  
-    "validFrom": "2021-02-18T12:00:00Z",  
-    "validTo": "2021-02-18T12:00:00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+      ]  
     ]  
+  },  
+  "threat": "physical",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
