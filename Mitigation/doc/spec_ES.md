@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Descripción global: **La mitigación de las consecuencias reduce el riesgo después de que se haya producido un suceso. Por lo tanto, esta medida de reducción del riesgo no es adecuada para la reducción de la probabilidad de que se produzcan sucesos, sino para la reducción de las consecuencias negativas. Ejemplos de medidas de mitigación de las consecuencias podrían ser, por ejemplo, la construcción de tuberías de conexión con el proveedor o proveedores de agua vecinos para obtener agua de ellos en caso de avería del suministro de agua propio, la construcción de pozos para un suministro de emergencia o la firma de contratos con organizaciones que proporcionen pequeñas plantas móviles de tratamiento de agua de emergencia**.  
-versión: 0.0.1  
+versión: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `affects[array]`: Conjunto de URIs relacionadas con el área en la que el riesgo podría afectar  - `alternateName[string]`: Un nombre alternativo para este artículo  - `apply[array]`: Conjunto de URIs relacionados con Medidas asociadas a la mitigación  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: Consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: La descripción del riesgo en un lenguaje natural  - `event[string]`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id[*]`: Identificador único de la entidad  - `likelihood[number]`: Probabilidad de que algo ocurra. En la terminología de la gestión de riesgos, la palabra "probabilidad" se utiliza para referirse a la posibilidad de que algo ocurra, ya sea definida, medida o determinada objetiva o subjetivamente, cualitativa o cuantitativamente, y descrita utilizando términos generales o matemáticamente (incluye también los tipos de probabilidad ofrecidos como LoAH, LoAS, LoC).  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `threat[string]`: Causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'cibernético, físico, ciberfísico'  - `type[string]`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo  - `validFrom[date-time]`: El momento en que finaliza la materialización del riesgo  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: Momento en que se inicia la materialización del riesgo  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Número que identifica una propiedad específica en una vía pública    
+- `affects[array]`: Conjunto de URIs relacionadas con el área a la que podría afectar el riesgo  - `alternateName[string]`: Un nombre alternativo para este artículo  - `apply[array]`: Conjunto de URIs relacionados con Medidas asociadas a la mitigación  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: Consecuencia causada por la materialización de un riesgo. Enum:'calidad, cantidad, reputación'  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: La descripción del riesgo en un lenguaje natural  - `event[string]`: Ocurrencia o cambio de un conjunto particular de circunstancias. Enum:'destrucción, interrupción, manipulación, contaminación'  - `id[*]`: Identificador único de la entidad  - `likelihood[number]`: Probabilidad de que algo ocurra. En la terminología de la gestión de riesgos, la palabra "probabilidad" se utiliza para referirse a la posibilidad de que algo ocurra, ya sea definida, medida o determinada objetiva o subjetivamente, cualitativa o cuantitativamente, y descrita utilizando términos generales o matemáticamente (incluye también los tipos de probabilidad ofrecidos como LoAH, LoAS, LoC).  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `threat[string]`: Causa potencial de un incidente que puede dar lugar a una violación de la seguridad de la información o comprometer las operaciones de la empresa. Enum:'cibernético, físico, ciberfísico'  - `type[string]`: Tipo de entidad NGSI-LD. Debe ser igual a Riesgo  - `validFrom[date-time]`: El momento en que finaliza la materialización del riesgo  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: Momento en que se inicia la materialización del riesgo  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 <!-- /35-RequiredProperties -->  
@@ -445,11 +446,11 @@ Mitigation:
   required: []    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Mitigation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -558,28 +559,28 @@ Mitigation:
   },  
   "consequence": {  
     "type": "Text",  
-    "value": "Reputation"  
+    "value": "reputation"  
   },  
   "description": {  
     "type": "Text",  
     "value": "Mitigation01 Corresponds to reboot the pump"  
   },  
   "event": {  
-    "type": "Array",  
-    "value": "Interruption"  
+    "type": "Text",  
+    "value": "interruption"  
   },  
   "likelihood": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.5  
   },  
   "affects": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:ServiceGISData:01"  
     ]  
   },  
   "apply": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Measure:01"  
     ]  
@@ -592,51 +593,51 @@ Mitigation:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Mitigation:01",  
-    "type": "Mitigation",  
-    "affects": [  
-        "urn:ngsi-ld:ServiceGISData:01"  
-    ],  
-    "apply": [  
-        "urn:ngsi-ld:Measure:01"  
-    ],  
-    "consequence": "reputation",  
-    "description": "Mitigation01 Corresponds to reboot the pump",  
-    "event": "interruption",  
-    "likelihood": 0.5,  
-    "location": {  
-        "type": "Polygon",  
-        "coordinates": [  
-            [  
-                [  
-                    23.6627,  
-                    41.88768  
-                ],  
-                [  
-                    25.85598,  
-                    43.38622  
-                ],  
-                [  
-                    23.4899,  
-                    43.78691  
-                ],  
-                [  
-                    22.35609,  
-                    42.28869  
-                ],  
-                [  
-                    23.6627,  
-                    41.88769  
-                ]  
-            ]  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
         ]  
-    },  
-    "threat": "physical",  
-    "validFrom": "2021-02-18T12:00:00Z",  
-    "validTo": "2021-02-18T12:00:00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+      ]  
     ]  
+  },  
+  "threat": "physical",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
