@@ -1,57 +1,57 @@
 {
-    "id": "urn:ngsi-ld:Risk:01",
-    "type": "Risk",
-    "affects": [
-        "urn:ngsi-ld:ServiceGISData:01"
-    ],
-    "consequence": "reputation",
-    "description": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure",
-    "event": "interruption",
-    "isOutputOf": [
-        "urn:ngsi-ld:EOGeoDataLayer:01",
-        "urn:ngsi-ld:EOGeoDataLayer:01"
-    ],
-    "linkTo": [
-        "urn:ngsi-ld:Risk:02"
-    ],
-    "location": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    23.6627,
-                    41.88768
-                ],
-                [
-                    25.85598,
-                    43.38622
-                ],
-                [
-                    23.4899,
-                    43.78691
-                ],
-                [
-                    22.35609,
-                    42.28869
-                ],
-                [
-                    23.6627,
-                    41.88769
-                ]
-            ]
+  "id": "urn:ngsi-ld:Risk:01",
+  "type": "Risk",
+  "affects": [
+    "urn:ngsi-ld:ServiceGISData:01"
+  ],
+  "consequence": "reputation",
+  "description": "Risk01 Corresponds to a failure in the Pumps of the water infraestructure",
+  "event": "interruption",
+  "isOutputOf": [
+    "urn:ngsi-ld:EOGeoDataLayer:01",
+    "urn:ngsi-ld:EOGeoDataLayer:01"
+  ],
+  "linkTo": [
+    "urn:ngsi-ld:Risk:02"
+  ],
+  "location": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          23.6627,
+          41.88768
+        ],
+        [
+          25.85598,
+          43.38622
+        ],
+        [
+          23.4899,
+          43.78691
+        ],
+        [
+          22.35609,
+          42.28869
+        ],
+        [
+          23.6627,
+          41.88769
         ]
-    },
-    "mitigatedBy": [
-        "urn:ngsi-ld:Mitigation:01"
-    ],
-    "severity": "MEDIUM",
-    "sourceRisk": [
-        "urn:ngsi-ld:Attacker:01"
-    ],
-    "threat": "physical",
-    "validFrom": "2021-02-18T12:00:00Z",
-    "validTo": "2021-02-18T12:00:00Z",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
+      ]
     ]
+  },
+  "mitigatedBy": [
+    "urn:ngsi-ld:Mitigation:01"
+  ],
+  "severity": "MEDIUM",
+  "sourceRisk": [
+    "urn:ngsi-ld:Attacker:01"
+  ],
+  "threat": "physical",
+  "validFrom": "2021-02-18T12:00:00Z",
+  "validTo": "2021-02-18T12:00:00Z",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"
+  ]
 }
