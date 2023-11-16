@@ -28,7 +28,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -36,7 +36,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -44,7 +44,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "description",
@@ -63,12 +63,17 @@
             "comment": "Chance of something happening. In risk management terminology, the word 'likelihood' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)"
         },
         {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
             "name": "name",
             "writable": true,
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "seeAlso",
@@ -81,7 +86,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "name": "validFrom",
@@ -89,7 +94,7 @@
             "displayName": "validFrom",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "The time at which the risk materialization is finished."
+            "comment": "The time at which the risk materialization is finished"
         },
         {
             "name": "validTo",
@@ -97,37 +102,7 @@
             "displayName": "validTo",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "The time at which the risk materialization is started."
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
+            "comment": "The time at which the risk materialization is started"
         },
         {
             "@type": "Telemetry",
@@ -136,7 +111,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Array of URIs related to the area in which the risk could affect.",
+            "comment": "Array of URIs related to the area in which the risk could affect",
             "displayName": "affects"
         },
         {
@@ -146,7 +121,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Array of URIs related to Measures associated to the mitigation.",
+            "comment": "Array of URIs related to Measures associated to the mitigation",
             "displayName": "apply"
         },
         {
@@ -178,6 +153,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -187,6 +166,10 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
                     "schema": "string"
                 }
             ]
