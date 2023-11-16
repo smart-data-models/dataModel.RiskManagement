@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Descrizione globale: **La mitigazione delle conseguenze riduce il rischio dopo che un evento si è verificato. Pertanto, questa misura di riduzione del rischio non è adatta a ridurre la probabilità di eventi, ma a ridurre le conseguenze negative. Esempi di misure di mitigazione delle conseguenze possono essere, ad esempio, la costruzione di tubi di collegamento con i fornitori d'acqua vicini per ottenere l'acqua da loro in caso di guasto della propria fornitura d'acqua, la costruzione di pozzi per una fornitura d'emergenza o la stipula di contratti con organizzazioni che forniscono piccoli impianti mobili di trattamento dell'acqua d'emergenza **.  
-versione: 0.0.1  
+versione: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `affects[array]`: Serie di URI relative all'area in cui il rischio potrebbe incidere  - `alternateName[string]`: Un nome alternativo per questa voce  - `apply[array]`: Serie di URI relativi a Misure associate alla mitigazione  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: La conseguenza causata dalla materializzazione di un rischio. Enum:'qualità, quantità, reputazione'.  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: La descrizione del rischio in linguaggio naturale  - `event[string]`: Avvenimento o cambiamento di un particolare insieme di circostanze. Enum:'distruzione, interruzione, manipolazione, inquinamento'.  - `id[*]`: Identificatore univoco dell'entità  - `likelihood[number]`: Probabilità che qualcosa accada. Nella terminologia della gestione del rischio, il termine "probabilità" è utilizzato per riferirsi alla possibilità che qualcosa accada, sia essa definita, misurata o determinata in modo oggettivo o soggettivo, qualitativo o quantitativo, e descritta con termini generali o matematici (include anche i tipi di probabilità offerte come LoAH, LoAS, LoC).  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `threat[string]`: La causa potenziale di un incidente che può provocare una violazione della sicurezza delle informazioni o compromettere le operazioni aziendali. Enum:'cyber, fisico, cyber-fisico'.  - `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a Rischio  - `validFrom[date-time]`: Il momento in cui si conclude la concretizzazione del rischio  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: Il momento in cui inizia la concretizzazione del rischio  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
+- `affects[array]`: Serie di URI relative all'area in cui il rischio potrebbe incidere  - `alternateName[string]`: Un nome alternativo per questa voce  - `apply[array]`: Serie di URI relativi a Misure associate alla mitigazione  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: La conseguenza causata dalla materializzazione di un rischio. Enum:'qualità, quantità, reputazione'.  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: La descrizione del rischio in linguaggio naturale  - `event[string]`: Avvenimento o cambiamento di un particolare insieme di circostanze. Enum:'distruzione, interruzione, manipolazione, inquinamento'.  - `id[*]`: Identificatore univoco dell'entità  - `likelihood[number]`: Probabilità che qualcosa accada. Nella terminologia della gestione del rischio, il termine "probabilità" è utilizzato per riferirsi alla possibilità che qualcosa accada, sia essa definita, misurata o determinata in modo oggettivo o soggettivo, qualitativo o quantitativo, e descritta con termini generali o matematici (include anche i tipi di probabilità offerte come LoAH, LoAS, LoC).  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `threat[string]`: La causa potenziale di un incidente che può provocare una violazione della sicurezza delle informazioni o compromettere le operazioni aziendali. Enum:'cyber, fisico, cyber-fisico'.  - `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a Rischio  - `validFrom[date-time]`: Il momento in cui si conclude la concretizzazione del rischio  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: Il momento in cui inizia la materializzazione del rischio  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 <!-- /35-RequiredProperties -->  
@@ -445,11 +446,11 @@ Mitigation:
   required: []    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Mitigation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -508,7 +509,7 @@ Mitigation:
 ```  
 </details>  
 #### Mitigazione NGSI-v2 normalizzato Esempio  
-Ecco un esempio di Mitigazione in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di mitigazione in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -558,28 +559,28 @@ Mitigation:
   },  
   "consequence": {  
     "type": "Text",  
-    "value": "Reputation"  
+    "value": "reputation"  
   },  
   "description": {  
     "type": "Text",  
     "value": "Mitigation01 Corresponds to reboot the pump"  
   },  
   "event": {  
-    "type": "Array",  
-    "value": "Interruption"  
+    "type": "Text",  
+    "value": "interruption"  
   },  
   "likelihood": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.5  
   },  
   "affects": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:ServiceGISData:01"  
     ]  
   },  
   "apply": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Measure:01"  
     ]  
@@ -592,55 +593,55 @@ Mitigation:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Mitigation:01",  
-    "type": "Mitigation",  
-    "affects": [  
-        "urn:ngsi-ld:ServiceGISData:01"  
-    ],  
-    "apply": [  
-        "urn:ngsi-ld:Measure:01"  
-    ],  
-    "consequence": "reputation",  
-    "description": "Mitigation01 Corresponds to reboot the pump",  
-    "event": "interruption",  
-    "likelihood": 0.5,  
-    "location": {  
-        "type": "Polygon",  
-        "coordinates": [  
-            [  
-                [  
-                    23.6627,  
-                    41.88768  
-                ],  
-                [  
-                    25.85598,  
-                    43.38622  
-                ],  
-                [  
-                    23.4899,  
-                    43.78691  
-                ],  
-                [  
-                    22.35609,  
-                    42.28869  
-                ],  
-                [  
-                    23.6627,  
-                    41.88769  
-                ]  
-            ]  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
         ]  
-    },  
-    "threat": "physical",  
-    "validFrom": "2021-02-18T12:00:00Z",  
-    "validTo": "2021-02-18T12:00:00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+      ]  
     ]  
+  },  
+  "threat": "physical",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
-#### Mitigazione NGSI-LD normalizzato Esempio  
+#### Mitigazione NGSI-LD normalizzata Esempio  
 Ecco un esempio di mitigazione in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
