@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Global description: **The mitigation of consequences reduces the risk after an event has occurred. Therefore, this risk reduction measure is not suitable for the reduction of the likelihood of events but for the reduction of the negative consequences. Examples for consequence mitigation measures could be e.g. the construction of connection pipes to the neighbor water supplier(s) to get water from them in case of a breakdown of the own water supply, the construction of wells for an emergency supply or signing of contracts with organizations providing small mobile emergency water treatment plants.**  
-version: 0.0.1  
+version: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `affects[array]`: Array of URIs related to the area in which the risk could affect  - `alternateName[string]`: An alternative name for this item  - `apply[array]`: Array of URIs related to Measures associated to the mitigation  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `consequence[string]`: The consequence caused by a risk materialization. Enum:'quality, quantity, reputation'  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: The risk description in a natural language  - `event[string]`: Occurrence or change of a particular set of circumstances. Enum:'destruction, interruption, manipulation, pollution'  - `id[*]`: Unique identifier of the entity  - `likelihood[number]`: Chance of something happening. In risk management terminology, the word 'likelihood' is used to refer to the chance of something happening, whether defined, measured or determined objectively or subjectively, qualitatively or quantitatively, and described using general terms or mathematically (includes also the types of offered likelihood such as LoAH, LoAS, LoC)  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `threat[string]`: The potential cause of an incident that may result in a breach of information security or compromise business operations. Enum:'cyber, physical, cyber-physical'  - `type[string]`: NGSI-LD Entity Type. It must be equal to Risk  - `validFrom[date-time]`: The time at which the risk materialization is finished  . Model: [https://schema.org/Time](https://schema.org/Time)- `validTo[date-time]`: The time at which the risk materialization is started  . Model: [https://schema.org/Time](https://schema.org/Time)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -445,11 +446,11 @@ Mitigation:
   required: []    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Mitigation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -558,28 +559,28 @@ Mitigation:
   },  
   "consequence": {  
     "type": "Text",  
-    "value": "Reputation"  
+    "value": "reputation"  
   },  
   "description": {  
     "type": "Text",  
     "value": "Mitigation01 Corresponds to reboot the pump"  
   },  
   "event": {  
-    "type": "Array",  
-    "value": "Interruption"  
+    "type": "Text",  
+    "value": "interruption"  
   },  
   "likelihood": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.5  
   },  
   "affects": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:ServiceGISData:01"  
     ]  
   },  
   "apply": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Measure:01"  
     ]  
@@ -592,51 +593,51 @@ Mitigation:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Mitigation:01",  
-    "type": "Mitigation",  
-    "affects": [  
-        "urn:ngsi-ld:ServiceGISData:01"  
-    ],  
-    "apply": [  
-        "urn:ngsi-ld:Measure:01"  
-    ],  
-    "consequence": "reputation",  
-    "description": "Mitigation01 Corresponds to reboot the pump",  
-    "event": "interruption",  
-    "likelihood": 0.5,  
-    "location": {  
-        "type": "Polygon",  
-        "coordinates": [  
-            [  
-                [  
-                    23.6627,  
-                    41.88768  
-                ],  
-                [  
-                    25.85598,  
-                    43.38622  
-                ],  
-                [  
-                    23.4899,  
-                    43.78691  
-                ],  
-                [  
-                    22.35609,  
-                    42.28869  
-                ],  
-                [  
-                    23.6627,  
-                    41.88769  
-                ]  
-            ]  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
         ]  
-    },  
-    "threat": "physical",  
-    "validFrom": "2021-02-18T12:00:00Z",  
-    "validTo": "2021-02-18T12:00:00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+      ]  
     ]  
+  },  
+  "threat": "physical",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
