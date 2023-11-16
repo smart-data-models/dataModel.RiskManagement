@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 글로벌 설명: **결과 완화는 이벤트가 발생한 후 위험을 줄이는 것입니다. 따라서 이 위험 감소 조치는 사건 발생 가능성을 줄이는 데 적합하지 않고 부정적인 결과를 줄이는 데 적합합니다. 결과 완화 조치의 예로는 자체 상수도 공급이 중단되는 경우 인근 상수도 공급업체에 연결 파이프를 건설하여 물을 공급받거나, 비상 공급을 위한 우물을 건설하거나, 소규모 이동식 비상 정수장을 제공하는 기관과 계약을 체결하는 것 등을 들 수 있습니다.**  
-버전: 0.0.1  
+버전: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -446,11 +446,11 @@ Mitigation:
   required: []    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.RiskManagement/blob/master/Mitigation/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.RiskAssessment/master/Mitigation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -559,28 +559,28 @@ Mitigation:
   },  
   "consequence": {  
     "type": "Text",  
-    "value": "Reputation"  
+    "value": "reputation"  
   },  
   "description": {  
     "type": "Text",  
     "value": "Mitigation01 Corresponds to reboot the pump"  
   },  
   "event": {  
-    "type": "Array",  
-    "value": "Interruption"  
+    "type": "Text",  
+    "value": "interruption"  
   },  
   "likelihood": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 0.5  
   },  
   "affects": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:ServiceGISData:01"  
     ]  
   },  
   "apply": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Measure:01"  
     ]  
@@ -593,51 +593,51 @@ Mitigation:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Mitigation:01",  
-    "type": "Mitigation",  
-    "affects": [  
-        "urn:ngsi-ld:ServiceGISData:01"  
-    ],  
-    "apply": [  
-        "urn:ngsi-ld:Measure:01"  
-    ],  
-    "consequence": "reputation",  
-    "description": "Mitigation01 Corresponds to reboot the pump",  
-    "event": "interruption",  
-    "likelihood": 0.5,  
-    "location": {  
-        "type": "Polygon",  
-        "coordinates": [  
-            [  
-                [  
-                    23.6627,  
-                    41.88768  
-                ],  
-                [  
-                    25.85598,  
-                    43.38622  
-                ],  
-                [  
-                    23.4899,  
-                    43.78691  
-                ],  
-                [  
-                    22.35609,  
-                    42.28869  
-                ],  
-                [  
-                    23.6627,  
-                    41.88769  
-                ]  
-            ]  
+  "id": "urn:ngsi-ld:Mitigation:01",  
+  "type": "Mitigation",  
+  "affects": [  
+    "urn:ngsi-ld:ServiceGISData:01"  
+  ],  
+  "apply": [  
+    "urn:ngsi-ld:Measure:01"  
+  ],  
+  "consequence": "reputation",  
+  "description": "Mitigation01 Corresponds to reboot the pump",  
+  "event": "interruption",  
+  "likelihood": 0.5,  
+  "location": {  
+    "type": "Polygon",  
+    "coordinates": [  
+      [  
+        [  
+          23.6627,  
+          41.88768  
+        ],  
+        [  
+          25.85598,  
+          43.38622  
+        ],  
+        [  
+          23.4899,  
+          43.78691  
+        ],  
+        [  
+          22.35609,  
+          42.28869  
+        ],  
+        [  
+          23.6627,  
+          41.88769  
         ]  
-    },  
-    "threat": "physical",  
-    "validFrom": "2021-02-18T12:00:00Z",  
-    "validTo": "2021-02-18T12:00:00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+      ]  
     ]  
+  },  
+  "threat": "physical",  
+  "validFrom": "2021-02-18T12:00:00Z",  
+  "validTo": "2021-02-18T12:00:00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -729,7 +729,7 @@ Mitigation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
