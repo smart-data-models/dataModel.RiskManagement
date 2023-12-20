@@ -1,2 +1,2 @@
-"id_", "type_", "validFrom_", "validTo_", "analysisType_", "value_", "affects__0_", "generate__0_"
-"urn:ngsi-ld:CyberAnalysis:01", "CyberAnalysis", "2021-02-18T12:00:00Z", "2021-02-19T12:00:00Z", "CyberAnalysis-AnomalyDetector", "0", "urn:ngsi-ld:Asset:01", "urn:ngsi-ld:NetworkServiceAlert:01"
+"id_", "type_", "validFrom_", "validTo_", "analysisType_", "affects__0_", "generate__0_"
+"urn:ngsi-ld:CyberAnalysis:01", "CyberAnalysis", "2021-02-18T12:00:00Z", "2021-02-19T12:00:00Z", "CyberAnalysis-AnomalyDetector", "urn:ngsi-ld:Asset:01", "urn:ngsi-ld:NetworkServiceAlert:01"
