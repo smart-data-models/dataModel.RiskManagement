@@ -1,6 +1,6 @@
 {
-    "@id": "urn:ngsi-ld:CyberAnalysis:01",
-    "@type": "CyberAnalysis",
+    "id": "urn:ngsi-ld:CyberAnalysis:01",
+    "type": "CyberAnalysis",
     "affects": {
         "type": "Property",
         "value": [
@@ -15,9 +15,6 @@
         "type": "Property",
         "value": [
             "urn:ngsi-ld:NetworkServiceAlert:01"
-        ],
-        "@context": [
-            "https://smartdatamodels.org/context.jsonld"
         ]
     },
     "validFrom": {
@@ -33,5 +30,8 @@
             "@type": "DateTime",
             "@value": "2021-02-18T12:00:00Z"
         }
-    }
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld"
+    ]
 }
