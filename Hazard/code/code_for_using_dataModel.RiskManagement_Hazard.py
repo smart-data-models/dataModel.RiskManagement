@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Hazard"
 subject = "dataModel.RiskManagement"
-analysisType = "{'type': 'Property', 'value': 'Flood Hazard Maps'}"
+analysisType = "Flood Hazard Maps"
 attribute = "analysisType"
 value = analysisType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-analyzedAt = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2021-02-18T12:00:00Z'}}"
+analyzedAt = "2021-02-18T12:00:00Z"
 attribute = "analyzedAt"
 value = analyzedAt
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-contentInformation = {'type': 'Property', 'value': [{'id': 0, 'value': 'Low', 'color': '(170, 255, 0)'}, {'id': 1, 'value': 'Medium', 'color': '(255, 255, 0)'}, {'id': 2, 'value': 'High', 'color': '(255, 170, 0)'}]}
+contentInformation = [{'id': 0, 'value': 'Low', 'color': '(170, 255, 0)'}, {'id': 1, 'value': 'Medium', 'color': '(255, 255, 0)'}, {'id': 2, 'value': 'High', 'color': '(255, 170, 0)'}]
 attribute = "contentInformation"
 value = contentInformation
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-createsLayers = {'type': 'Property', 'object': ['urn:ngsi-ld:EOGeoDataLayer.05', 'urn:ngsi-ld:EOGeoDataLayer.06']}
+createsLayers = ['urn:ngsi-ld:EOGeoDataLayer:05', 'urn:ngsi-ld:EOGeoDataLayer:06']
 attribute = "createsLayers"
 value = createsLayers
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
