@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Mitigation"
 subject = "dataModel.RiskManagement"
-affects = {'type': 'Relationship', 'value': 'urn:ngsi-ld:ServiceGISData:01'}
+affects = ['urn:ngsi-ld:ServiceGISData:01']
 attribute = "affects"
 value = affects
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-apply = {'type': 'Relationship', 'value': 'urn:ngsi-ld:Measure:01'}
+apply = ['urn:ngsi-ld:Measure:01']
 attribute = "apply"
 value = apply
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-consequence = "{'type': 'Property', 'value': 'reputation'}"
+consequence = "reputation"
 attribute = "consequence"
 value = consequence
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-event = "{'type': 'Property', 'value': 'interruption'}"
+event = "interruption"
 attribute = "event"
 value = event
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
