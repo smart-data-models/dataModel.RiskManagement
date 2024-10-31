@@ -23,7 +23,7 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.RiskManagement/category",
         "color": "https://smartdatamodels.org/color",
@@ -31,7 +31,7 @@
         "contentInformation": "https://smartdatamodels.org/dataModel.RiskManagement/contentInformation",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "createsLayers": "https://smartdatamodels.org/dataModel.RiskManagement/createsLayers",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
@@ -52,7 +52,7 @@
         "isOutputOf": "https://smartdatamodels.org/dataModel.RiskManagement/isOutputOf",
         "likelihood": "https://smartdatamodels.org/dataModel.RiskManagement/likelihood",
         "linkTo": "https://smartdatamodels.org/dataModel.RiskManagement/linkTo",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "mitigatedBy": "https://smartdatamodels.org/dataModel.RiskManagement/mitigatedBy",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
@@ -70,7 +70,7 @@
         "type": "@type",
         "validFrom": "https://smartdatamodels.org/validFrom",
         "validTo": "https://smartdatamodels.org/dataModel.RiskManagement/validTo",
-        "value": "ngsi-ld:hasValue",
+        "value": "https://uri.etsi.org/ngsi-ld/hasValue",
         "vulnerabilityValues": "https://smartdatamodels.org/dataModel.RiskManagement/vulnerabilityValues"
     }
 }
