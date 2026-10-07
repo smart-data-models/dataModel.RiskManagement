@@ -1,5 +1,5 @@
 /* (Beta) Export of data model NetworkServiceAlert of the subject dataModel.RiskManagement for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE severity_type AS ENUM ('LOW', 'MEDIUM', 'HIGH');
+CREATE TYPE NetworkServiceAlert_severity_type AS ENUM ('LOW', 'MEDIUM', 'HIGH');
 CREATE TYPE NetworkServiceAlert_type AS ENUM ('NetworkServiceAlert');
 CREATE TABLE NetworkServiceAlert (
   "address" JSON,
@@ -17,7 +17,7 @@ CREATE TABLE NetworkServiceAlert (
   "name" TEXT,
   "owner" JSON,
   "seeAlso" JSON,
-  "severity" severity_type,
+  "severity" NetworkServiceAlert_severity_type,
   "source" TEXT,
   "subcategory" TEXT,
   "type" NetworkServiceAlert_type,
